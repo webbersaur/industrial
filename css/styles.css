@@ -208,13 +208,13 @@ p + p { margin-top: 1rem; }
 }
 
 .header-logo img {
-  height: 55px;
+  height: 85px;
   width: auto;
   transition: height var(--transition);
 }
 
 .site-header.scrolled .header-logo img {
-  height: 42px;
+  height: 60px;
 }
 
 .nav-links {
@@ -1247,7 +1247,7 @@ p + p { margin-top: 1rem; }
 }
 
 .footer-brand img {
-  height: 50px;
+  height: 75px;
   margin-bottom: 1rem;
 }
 
