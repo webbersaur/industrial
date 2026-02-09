@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Static HTML/CSS/JS website for Industrial Flooring Technologies (industrialfloortech.com), an epoxy/concrete flooring contractor at 594 Sherman Ave, Hamden CT 06514. Deployed via GitHub Pages.
+Static HTML/CSS/JS website for Industrial Flooring Technologies (industrialfloortech.com), an epoxy/concrete flooring contractor at 594 Sherman Ave, Hamden CT 06514. Deployed via Vercel.
 
 ## File Structure
 
@@ -19,6 +19,7 @@ industrial/
 │   ├── hero/           8 hero images (1920px WebP)
 │   ├── web/            65 images (1200px WebP)
 │   └── gbp/            73 originals with EXIF (excluded from git)
+├── vercel.json         Vercel config (clean URLs, 301 redirects from old site)
 ├── .gitignore
 └── CLAUDE.md
 ```
@@ -55,7 +56,7 @@ industrial/
 # Local dev server
 python3 -m http.server 8080
 
-# Deploy (GitHub Pages on main branch)
+# Deploy (Vercel, auto-deploys on push to main)
 git add -A && git commit -m "message" && git push origin main
 ```
 

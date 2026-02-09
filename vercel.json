@@ -1,0 +1,24 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/page/19972-About-Us", "destination": "/about", "permanent": true },
+    { "source": "/page/20019-Services", "destination": "/services", "permanent": true },
+    { "source": "/page/29518-Surface-Preparation", "destination": "/services", "permanent": true },
+    { "source": "/page/20018-Home-info", "destination": "/", "permanent": true },
+    { "source": "/page/29550-Contact-Us", "destination": "/contact", "permanent": true },
+    { "source": "/page/20233-Commercial-Photos", "destination": "/gallery", "permanent": true },
+    { "source": "/page/20236-Concrete-Polishing-Photos", "destination": "/gallery", "permanent": true },
+    { "source": "/page/20234-Residential-Photos", "destination": "/gallery", "permanent": true },
+    { "source": "/page/20048-Floor-Preparation-Photos", "destination": "/gallery", "permanent": true },
+    { "source": "/page/20046-References", "destination": "/about", "permanent": true },
+    { "source": "/page/34260-Color-Charts", "destination": "/services", "permanent": true },
+    { "source": "/page/20035-Company-Equipment", "destination": "/about", "permanent": true },
+    { "source": "/page/20037-Vendors", "destination": "/about", "permanent": true },
+    { "source": "/page/20038-Vendors-Blast-Track", "destination": "/about", "permanent": true },
+    { "source": "/page/20039-Vendors-Sase-Equipment", "destination": "/about", "permanent": true },
+    { "source": "/page/29650-Rate-Your-Experience", "destination": "/contact", "permanent": true },
+    { "source": "/page/29651-RYE-Pos", "destination": "/contact", "permanent": true },
+    { "source": "/page/29652-RYE-Neg", "destination": "/contact", "permanent": true },
+    { "source": "/page/:path*", "destination": "/", "permanent": true }
+  ]
+}
