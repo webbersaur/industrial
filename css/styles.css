@@ -1432,6 +1432,37 @@ p + p { margin-top: 1rem; }
   background: #0D2270;
 }
 
+/* Rate Us Section (Home Page) */
+.rate-section-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.rate-section-text {
+  max-width: 650px;
+}
+
+.rate-section-text h2 {
+  margin-bottom: 1rem;
+}
+
+.rate-section-text .accent-line {
+  width: 60px;
+  height: 3px;
+  background: var(--yellow);
+  margin-bottom: 1.25rem;
+}
+
+.rate-section-text p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rate-section-action {
+  flex-shrink: 0;
+}
+
 /* Footer Rate Us Button */
 .footer-rate-btn {
   color: var(--text-muted);
@@ -1703,6 +1734,16 @@ p + p { margin-top: 1rem; }
   .page-header {
     min-height: 280px;
     padding-bottom: 2rem;
+  }
+
+  .rate-section-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rate-section-text .accent-line {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

@@ -223,6 +223,10 @@
     rateOpenBtn.addEventListener('click', openRateUsModal);
   }
 
+  document.querySelectorAll('.rate-us-trigger').forEach(function (btn) {
+    btn.addEventListener('click', openRateUsModal);
+  });
+
   if (rateCloseBtn) {
     rateCloseBtn.addEventListener('click', closeRateUsModal);
   }
