@@ -202,4 +202,39 @@
     });
   }
 
+  // --- Rate Us Modal ---
+  var rateModal = document.getElementById('rateUsModal');
+  var rateOpenBtn = document.getElementById('footerRateUsBtn');
+  var rateCloseBtn = document.getElementById('closeRateUsModal');
+
+  function openRateUsModal() {
+    if (!rateModal) return;
+    rateModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeRateUsModal() {
+    if (!rateModal) return;
+    rateModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (rateOpenBtn) {
+    rateOpenBtn.addEventListener('click', openRateUsModal);
+  }
+
+  if (rateCloseBtn) {
+    rateCloseBtn.addEventListener('click', closeRateUsModal);
+  }
+
+  if (rateModal) {
+    rateModal.addEventListener('click', function (e) {
+      if (e.target === rateModal) closeRateUsModal();
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeRateUsModal();
+  });
+
 })();

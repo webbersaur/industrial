@@ -16,9 +16,9 @@
     { "source": "/page/20037-Vendors", "destination": "/about", "permanent": true },
     { "source": "/page/20038-Vendors-Blast-Track", "destination": "/about", "permanent": true },
     { "source": "/page/20039-Vendors-Sase-Equipment", "destination": "/about", "permanent": true },
-    { "source": "/page/29650-Rate-Your-Experience", "destination": "/contact", "permanent": true },
-    { "source": "/page/29651-RYE-Pos", "destination": "/contact", "permanent": true },
-    { "source": "/page/29652-RYE-Neg", "destination": "/contact", "permanent": true },
+    { "source": "/page/29650-Rate-Your-Experience", "destination": "/feedback", "permanent": true },
+    { "source": "/page/29651-RYE-Pos", "destination": "/feedback", "permanent": true },
+    { "source": "/page/29652-RYE-Neg", "destination": "/not-happy", "permanent": true },
     { "source": "/page/:path*", "destination": "/", "permanent": true }
   ]
 }

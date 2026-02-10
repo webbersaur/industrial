@@ -288,6 +288,7 @@
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><button type="button" class="footer-rate-btn" id="footerRateUsBtn">Rate Us</button></li>
           </ul>
         </div>
         <div>
@@ -315,6 +316,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- Rate Us Modal -->
+  <div class="rate-modal-overlay" id="rateUsModal">
+    <div class="rate-modal">
+      <button class="rate-modal-close" id="closeRateUsModal" aria-label="Close">&times;</button>
+      <h2 class="rate-modal-title">How Was Your Experience?</h2>
+      <p class="rate-modal-subtitle">We value your feedback!</p>
+      <div class="rate-modal-buttons">
+        <a href="feedback.html" class="rate-modal-btn rate-modal-btn-happy">
+          <span class="rate-modal-btn-icon">&#128522;</span>
+          <span class="rate-modal-btn-text">Happy</span>
+        </a>
+        <a href="not-happy.html" class="rate-modal-btn rate-modal-btn-sad">
+          <span class="rate-modal-btn-icon">&#128532;</span>
+          <span class="rate-modal-btn-text">Not Happy</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
