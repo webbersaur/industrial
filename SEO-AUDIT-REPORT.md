@@ -5,6 +5,47 @@
 
 ---
 
+## "But I Already Show Up on Google, and My Site Looks Better Than Theirs"
+
+We hear you. Let's talk about both of those things, because they're important -- and they're also a little misleading.
+
+### Yes, you show up in the map. That's your Google Business Profile -- not your website.
+
+When you Google your company and see yourself in that little map box with the pin, the phone number, and the reviews -- that's called the **Local Pack.** It looks like this is coming from your website, but it's actually powered by your **Google Business Profile** (the listing you manage through Google). Your website has almost nothing to do with it.
+
+Here's the problem: **there's room for 3 businesses in that map box.** Below it, there are 10 organic results. That's where the real battle happens -- and that's where your website matters. Right now:
+
+- Search **"epoxy floors CT"** -- your website is **not on page 1 at all.** Not in the 10 results below the map.
+- Search **"polyaspartic flooring Connecticut"** -- **not there.**
+- Search **"urethane cement flooring CT"** -- **not there.**
+
+You're only showing up in the map box for people who already know your name or search for your exact address. The **thousands of people searching for what you do** (not who you are) can't find you. Those searches go to your competitors.
+
+Think of it this way: the Google Maps listing is like having your name in the phone book. The organic results below the map are like having a billboard on I-95. Right now, you've got the phone book listing, but your competitors have the billboards.
+
+And here's the kicker: **a better website actually helps your map ranking too.** Google uses your website's content, structure, and speed as signals to decide who gets into that 3-pack. A stronger site = higher map placement, especially when the competition is close.
+
+### "My site looks better than theirs."
+
+You might be right. To a human, your site might look perfectly fine. But here's the thing that's hard to wrap your head around: **Google is not a human. Google is blind.**
+
+Google doesn't see your photos. Google doesn't see your colors, your layout, or your logo. Google reads *code.* And when Google reads your code, here's what it sees compared to what it sees on your competitors' sites:
+
+| What Google Looks For | Your Site | Their Sites |
+|---|---|---|
+| "What is this business?" | No answer (no structured data) | Name, address, phone, hours, services, ratings |
+| "What's in these photos?" | No idea (no image labels) | Most have at least some labels |
+| "Does this work on a phone?" | No (no mobile viewport) | Yes |
+| "What is this page about?" | Unclear (no H1 heading tags) | Clear topic per page |
+| "What should I show in search results?" | Make something up (no meta description) | Custom description provided |
+| "How fast does this load?" | Slow (150KB of code from 2007) | Moderate to fast |
+
+Your competitors' sites might look worse to *you*, but to *Google*, they look like open books full of useful information. Your site looks like a locked filing cabinet.
+
+**Looking good to humans and looking good to Google are two completely different things.** The new site does both. It looks great *and* it speaks Google's language fluently. That's how you start getting calls from people who don't already know your name.
+
+---
+
 ## The Bottom Line (Plain English)
 
 **Think of your website like your storefront on the busiest highway in Connecticut -- except right now, the lights are off, there's no sign out front, and the door is half-stuck.**
