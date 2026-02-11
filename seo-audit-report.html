@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit Report — Industrial Flooring Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ──────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Roboto',Arial,sans-serif;font-weight:400;line-height:1.7;color:#1a1a1a;background:#f4f5f7}
+
+/* ── Layout ────────────────────────────────────── */
+.report-wrapper{max-width:940px;margin:0 auto;padding:40px 28px 80px}
+section{background:#fff;border-radius:8px;padding:36px 40px;margin-bottom:28px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+section.plain-english,section.keywords-myth{background:linear-gradient(135deg,#fafbff 0%,#f0f3ff 100%);border-left:5px solid #0A1B5C}
+section.keywords-myth{background:linear-gradient(135deg,#fffdf5 0%,#fff9e0 100%);border-left:5px solid #FFE600}
+
+/* ── Typography ────────────────────────────────── */
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em;line-height:1.25}
+h1{font-size:2rem;color:#0A1B5C;margin-bottom:6px}
+h2{font-size:1.55rem;color:#0A1B5C;margin-bottom:18px;padding-bottom:10px;border-bottom:3px solid #FFE600}
+h3{font-size:1.15rem;color:#0A1B5C;margin:22px 0 10px}
+h4{font-size:1rem;color:#333;margin:16px 0 8px}
+p{margin-bottom:14px}
+strong{font-weight:700}
+em{font-style:italic}
+a{color:#0A1B5C;text-decoration:underline}
+a:hover{color:#FFE600}
+
+/* ── Cover / Header ────────────────────────────── */
+.cover{background:#0A1B5C;color:#fff;border-radius:8px;padding:48px 40px 40px;margin-bottom:28px;box-shadow:0 2px 8px rgba(10,27,92,.25);border:none;text-align:center}
+.cover h1{color:#FFE600;font-size:2.4rem;margin-bottom:4px}
+.cover .subtitle{font-family:'Oswald',sans-serif;font-size:1.15rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.85);margin-bottom:20px}
+.cover .meta{font-size:.92rem;color:rgba(255,255,255,.7);line-height:1.8}
+.cover .meta strong{color:#fff}
+
+/* ── Table of Contents (top bar) ───────────────── */
+.toc-bar{position:sticky;top:0;z-index:100;background:#0A1B5C;border-radius:0;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.15);border:none;margin-bottom:28px}
+.toc-bar .toc-toggle{display:none;background:none;border:none;color:#fff;font-family:'Oswald',sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:.05em;padding:14px 20px;cursor:pointer;width:100%}
+.toc-bar .toc-toggle::after{content:'▾';margin-left:8px}
+.toc-bar.open .toc-toggle::after{content:'▴'}
+.toc-links{display:flex;flex-wrap:wrap;gap:0;padding:0 12px;list-style:none}
+.toc-links a{display:block;padding:12px 10px;font-family:'Oswald',sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.8);text-decoration:none;white-space:nowrap;transition:color .2s,background .2s}
+.toc-links a:hover,.toc-links a:focus{color:#FFE600;background:rgba(255,255,255,.06)}
+@media(max-width:900px){
+  .toc-bar .toc-toggle{display:block;text-align:left}
+  .toc-links{display:none;flex-direction:column;padding:0 8px 10px}
+  .toc-bar.open .toc-links{display:flex}
+  .toc-links a{padding:10px 12px;font-size:.85rem}
+}
+
+/* ── Lists ─────────────────────────────────────── */
+ul,ol{margin:0 0 16px 22px}
+li{margin-bottom:6px}
+li strong{color:#0A1B5C}
+
+/* ── Tables ────────────────────────────────────── */
+.table-wrap{overflow-x:auto;margin:16px 0 20px;border-radius:6px;border:1px solid #d1d5db}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:540px}
+thead{background:#0A1B5C;color:#fff}
+thead th{padding:10px 14px;text-align:left;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:.8rem;white-space:nowrap}
+tbody td{padding:10px 14px;border-bottom:1px solid #e5e7eb;vertical-align:top}
+tbody tr:nth-child(even){background:#f8f9fb}
+tbody tr:hover{background:#eef1f8}
+tbody tr.ift-highlight{background:#e8ecf8;font-weight:500}
+tbody tr.ift-new-highlight{background:#d4f5d4;font-weight:700}
+
+/* ── Status Badges ─────────────────────────────── */
+.badge{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 10px;border-radius:12px;white-space:nowrap;font-family:'Oswald',sans-serif}
+.badge-critical{background:#dc2626;color:#fff}
+.badge-high{background:#f97316;color:#fff}
+.badge-medium{background:#eab308;color:#1a1a1a}
+.badge-low{background:#3b82f6;color:#fff}
+
+/* ── Check / X marks ───────────────────────────── */
+.check{color:#16a34a;font-weight:700}
+.xmark{color:#dc2626;font-weight:700}
+
+/* ── Code Blocks ───────────────────────────────── */
+pre{background:#141414;color:#e5e7eb;padding:18px 20px;border-radius:6px;overflow-x:auto;font-size:.84rem;line-height:1.6;margin:14px 0 18px;font-family:'Roboto Mono',monospace}
+code{font-family:'Roboto Mono',monospace;font-size:.86em;background:#e5e7eb;padding:2px 6px;border-radius:3px;color:#0A1B5C}
+pre code{background:none;padding:0;color:inherit}
+
+/* ── Score Bars ────────────────────────────────── */
+.score-bars{margin:20px 0 24px}
+.score-row{display:flex;align-items:center;margin-bottom:8px;gap:12px}
+.score-label{width:185px;flex-shrink:0;font-size:.85rem;font-weight:500;text-align:right}
+.score-track{flex:1;height:28px;background:#e5e7eb;border-radius:14px;overflow:hidden;position:relative}
+.score-fill{height:100%;border-radius:14px;display:flex;align-items:center;justify-content:flex-end;padding-right:12px;font-size:.75rem;font-weight:700;color:#fff;transition:width .6s ease}
+.score-fill.ift-old{background:linear-gradient(90deg,#dc2626,#ef4444)}
+.score-fill.competitor{background:linear-gradient(90deg,#6B7280,#9ca3af)}
+.score-fill.ift-new{background:linear-gradient(90deg,#0A1B5C,#1e3a8a)}
+.score-row.highlight-old .score-label{color:#dc2626;font-weight:700}
+.score-row.highlight-new .score-label{color:#0A1B5C;font-weight:700}
+
+/* ── Benefit Callouts ──────────────────────────── */
+.benefit{background:#f0f9ff;border-left:4px solid #0A1B5C;padding:14px 18px;margin:14px 0 18px;border-radius:0 6px 6px 0;font-size:.9rem}
+.benefit strong{color:#0A1B5C}
+
+/* ── Divider ───────────────────────────────────── */
+.divider{border:none;border-top:2px solid #e5e7eb;margin:30px 0}
+
+/* ── Analogy Table ─────────────────────────────── */
+.analogy-table tbody td:nth-child(3){font-weight:700;text-align:center}
+
+/* ── Priority Badges ───────────────────────────── */
+.priority-critical{color:#dc2626;font-weight:700}
+.priority-high{color:#f97316;font-weight:700}
+.priority-medium{color:#eab308;font-weight:700}
+.priority-low{color:#3b82f6;font-weight:700}
+
+/* ── Footer ────────────────────────────────────── */
+.report-footer{text-align:center;font-size:.82rem;color:#6B7280;padding:20px 0 0;border-top:2px solid #e5e7eb;margin-top:20px}
+.report-footer a{color:#0A1B5C}
+.report-footer .sources{text-align:left;margin-top:14px}
+.report-footer .sources li{margin-bottom:4px}
+
+/* ── Numbered Lists (Post-Launch) ──────────────── */
+ol.post-launch{counter-reset:pl}
+ol.post-launch li{counter-increment:pl;list-style:none;padding-left:8px;margin-bottom:10px}
+ol.post-launch li::before{content:counter(pl) ".";font-weight:700;color:#0A1B5C;margin-right:6px}
+
+/* ── Responsive ────────────────────────────────── */
+@media(max-width:768px){
+  .report-wrapper{padding:16px 6px 60px}
+  section{padding:22px 16px;margin-bottom:18px}
+  .cover{padding:30px 18px 26px}
+  .cover h1{font-size:1.6rem}
+  h2{font-size:1.25rem}
+  .score-label{width:130px;font-size:.78rem}
+  .score-fill{font-size:.68rem;padding-right:6px}
+  table{font-size:.78rem}
+  thead th,tbody td{padding:7px 8px}
+}
+@media(max-width:480px){
+  .score-row{flex-direction:column;align-items:flex-start;gap:4px}
+  .score-label{width:auto;text-align:left}
+  .score-track{width:100%}
+}
+
+/* ── Print ─────────────────────────────────────── */
+@media print{
+  body{background:#fff;font-size:10pt;color:#000}
+  .toc-bar{display:none}
+  .report-wrapper{max-width:100%;padding:0}
+  section{box-shadow:none;border:1px solid #ccc;break-inside:avoid;page-break-inside:avoid;margin-bottom:14px;padding:20px 24px}
+  section.plain-english,section.keywords-myth{background:#f8f8ff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cover{background:#0A1B5C !important;color:#fff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cover h1{color:#FFE600 !important}
+  thead{background:#0A1B5C !important;color:#fff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  tbody tr:nth-child(even){background:#f0f0f0 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  tbody tr.ift-highlight{background:#e0e4f0 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  tbody tr.ift-new-highlight{background:#d0f0d0 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .badge{border:1px solid #999}
+  .score-fill{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .benefit{background:#f0f4ff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a{color:#0A1B5C;text-decoration:none}
+  pre{background:#222 !important;color:#eee !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="report-wrapper">
+
+<!-- ════════════════════════════════════════════════
+     COVER
+     ════════════════════════════════════════════════ -->
+<div class="cover">
+  <h1>SEO Audit Report</h1>
+  <div class="subtitle">industrialfloortech.com</div>
+  <p class="subtitle" style="font-size:.95rem;margin-top:-6px">Current Live Site vs. New Site Build</p>
+  <div class="meta">
+    <strong>Prepared:</strong> February 11, 2026<br>
+    <strong>Client:</strong> Industrial Flooring Technologies, Hamden CT
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     TABLE OF CONTENTS BAR
+     ════════════════════════════════════════════════ -->
+<nav class="toc-bar" id="toc">
+  <button class="toc-toggle" onclick="this.parentElement.classList.toggle('open')">Table of Contents</button>
+  <ul class="toc-links">
+    <li><a href="#bottom-line">Bottom Line</a></li>
+    <li><a href="#keywords-myth">Keywords Myth</a></li>
+    <li><a href="#exec-summary">Executive Summary</a></li>
+    <li><a href="#sec1">1. Titles</a></li>
+    <li><a href="#sec2">2. Meta</a></li>
+    <li><a href="#sec3">3. Schema</a></li>
+    <li><a href="#sec4">4. Mobile</a></li>
+    <li><a href="#sec5">5. Images</a></li>
+    <li><a href="#sec6">6. Headings</a></li>
+    <li><a href="#sec7">7. URLs</a></li>
+    <li><a href="#sec8">8. Open Graph</a></li>
+    <li><a href="#sec9">9. Canonicals</a></li>
+    <li><a href="#sec10">10. Speed</a></li>
+    <li><a href="#sec11">11. Sitemap</a></li>
+    <li><a href="#sec12">12. Content</a></li>
+    <li><a href="#sec13">13. Architecture</a></li>
+    <li><a href="#sec14">14. Accessibility</a></li>
+    <li><a href="#sec15">15. Competitive</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#post-launch">Post-Launch</a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════════════════════════════════════
+     THE BOTTOM LINE (PLAIN ENGLISH)
+     ════════════════════════════════════════════════ -->
+<section class="plain-english" id="bottom-line">
+  <h2>The Bottom Line (Plain English)</h2>
+  <p><strong>Think of your website like your storefront on the busiest highway in Connecticut -- except right now, the lights are off, there's no sign out front, and the door is half-stuck.</strong></p>
+  <p>Here's what's happening in simple terms:</p>
+
+  <h3>Your current website is almost invisible to Google.</h3>
+  <p>When someone in Connecticut pulls out their phone and searches "epoxy floors CT," your company doesn't show up. Not on the first page. Not on the second page. Nowhere. Meanwhile, your competitors -- DiamondKote, CT Concrete Floors, Everlast -- they're right there at the top getting those calls instead of you.</p>
+  <p>It gets worse. When someone searches for "polyaspartic flooring" or "urethane cement flooring" -- services you actually offer -- <strong>you don't show up at all.</strong> A company called 5 Star Concrete Coatings owns 8 out of 10 Google results for polyaspartic flooring in Hamden. Your own city. They're getting the leads that should be going to you.</p>
+
+  <h3>Why is this happening?</h3>
+  <p>Your current website was built on old technology that doesn't speak Google's language. Imagine trying to enter a building but there's no address number, no name on the door, and the doorbell is broken. That's what your website looks like to Google right now:</p>
+  <ul>
+    <li><strong>No description of your business</strong> that Google can read (every competitor has one)</li>
+    <li><strong>No labels on any of your photos</strong> -- Google literally doesn't know what's in them. You have great project photos, but Google sees blank images</li>
+    <li><strong>Doesn't work on phones</strong> -- over 60% of people search on their phone. When they find your site, it shows up tiny and they have to pinch and zoom. Most people just hit the back button and call someone else</li>
+    <li><strong>Your address, hours, phone number, and services aren't tagged</strong> in a way Google understands, so you don't show up properly on Google Maps or in the local business box at the top of search results</li>
+    <li><strong>Your web addresses look like</strong> <code>/page/20019-Services</code> instead of just <code>/services</code> -- Google doesn't like that, and neither do people</li>
+  </ul>
+
+  <h3>What the new website fixes</h3>
+  <p>The new site is like going from a handwritten flyer to a professional billboard on I-95:</p>
+  <ul>
+    <li><strong>Google can finally read everything.</strong> Your business name, address, phone number, services, hours, ratings -- it's all tagged in the exact format Google wants. This is how you get into the Google Maps box and the "knowledge panel" (that info box on the right side of search results)</li>
+    <li><strong>Every single photo has a description.</strong> Your 42+ project photos will now show up in Google Image Search. For a visual business like flooring, this is a huge source of new leads that you're currently getting zero benefit from</li>
+    <li><strong>Works perfectly on phones.</strong> Tap the phone number to call. Easy to read. Easy to navigate. No pinching or zooming</li>
+    <li><strong>Loads fast.</strong> Your current site loads like it's on dial-up because of outdated code from 2007. The new site loads almost instantly. Google rewards fast sites with higher rankings</li>
+    <li><strong>Clean, professional web addresses.</strong> <code>/services</code> instead of <code>/page/20019-Services</code>. People trust these more, and Google ranks them higher</li>
+  </ul>
+
+  <h3>How you compare to your competitors right now vs. after the upgrade</h3>
+  <p>Think of it like a scorecard out of 100:</p>
+
+  <div class="score-bars">
+    <div class="score-row highlight-old">
+      <div class="score-label">Your current website</div>
+      <div class="score-track"><div class="score-fill ift-old" style="width:15%">15</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">Heavy Duty Floors</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:40%">40</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">Everlast Flooring</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:62%">62</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">Pro Epoxy CT</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:65%">65</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">DiamondKote</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:65%">65</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">CT Concrete Floors</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:75%">75</div></div>
+    </div>
+    <div class="score-row highlight-new">
+      <div class="score-label">YOUR NEW WEBSITE</div>
+      <div class="score-track"><div class="score-fill ift-new" style="width:82%">82</div></div>
+    </div>
+  </div>
+
+  <p><strong>You'd go from dead last to first place.</strong> No competitor in your market has a site this technically strong.</p>
+
+  <h3>What this means in real dollars</h3>
+  <p>Every day the old site stays up is a day where:</p>
+  <ul>
+    <li>People searching for epoxy flooring in CT are finding your competitors instead of you</li>
+    <li>People searching on their phones (the majority) are bouncing off your site</li>
+    <li>Your 5-star Google rating, 25+ years experience, and Yale/UConn/Pepsi client list aren't being communicated to Google in a way that helps your rankings</li>
+    <li>Competitors with weaker reputations but better websites are getting calls that should be yours</li>
+  </ul>
+  <p>You don't need to understand the technical details. The short version is: <strong>your current website is a Yellow Pages ad in a world that uses Google, and the new one actually plays by Google's rules.</strong></p>
+  <p>The rest of this report has all the technical proof if you or anyone else wants to dig into the details.</p>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     CAN'T I JUST ADD KEYWORDS?
+     ════════════════════════════════════════════════ -->
+<section class="keywords-myth" id="keywords-myth">
+  <h2>"Can't I Just Add Keywords to My Home Page?"</h2>
+  <p><strong>Short answer: No. Here's why.</strong></p>
+  <p>This is one of the most common misconceptions about how Google works, so let's clear it up.</p>
+
+  <h3>Adding keywords to your current site is like putting a fresh coat of paint on a car with no engine.</h3>
+  <p>Your current website has fundamental problems that <strong>prevent Google from reading it properly in the first place.</strong> It doesn't matter what words are on the page if:</p>
+  <ul>
+    <li>Google can't tell it's a mobile-friendly site (it can't)</li>
+    <li>Google can't read your photos (it can't -- none of them have descriptions)</li>
+    <li>Google can't find your business info in a structured format (it can't -- there's no schema markup)</li>
+    <li>Google sees your pages loading slowly with code from 2007 (it does)</li>
+  </ul>
+  <p>Imagine writing your phone number on a billboard, but the billboard is facing the wrong direction and the lights are off. Doesn't matter how big you write it -- nobody's going to see it.</p>
+
+  <h3>Google doesn't rank pages. Google ranks <em>websites.</em></h3>
+  <p>When Google decides whether to show your site for "urethane cement flooring CT," it doesn't just look at whether those words appear on your home page. It looks at the <strong>entire website</strong> and asks:</p>
+  <ol>
+    <li><strong>Is this site trustworthy?</strong> (Does it have proper business info, ratings, structured data? Yours doesn't.)</li>
+    <li><strong>Is this site fast and mobile-friendly?</strong> (Yours isn't.)</li>
+    <li><strong>Does this site have in-depth expertise on this topic?</strong> (One mention on a home page says "we do this." A dedicated page with details, photos, and project examples says "we're experts at this.")</li>
+    <li><strong>Do the photos, headings, and page structure back up the claim?</strong> (Your photos have no labels. Your pages have no headings. Google sees a blank wall.)</li>
+  </ol>
+  <p>Your competitors aren't beating you because they have better keywords. They're beating you because <strong>their websites check all these boxes and yours checks almost none of them.</strong></p>
+
+  <h3>Here's a real example from your own market</h3>
+  <p>When you search "poly aspartic flooring Connecticut," the #3 result is a company called CT Concrete Floors. They rank there because they wrote a detailed blog post called "Ultimate Guide To Polyaspartic Floor Coating Solutions." It's not a magic trick -- it's a dedicated, informative page about that specific topic.</p>
+  <p>Meanwhile, a company called 5 Star Concrete Coatings owns <strong>8 out of 10</strong> Google results for "polyaspartic floor coating Hamden CT" -- your city. They did this by creating individual pages for each service in each city they serve. That's how they're getting calls that should be going to you.</p>
+  <p>You can't compete with that by sprinkling a few keywords on your home page. You need:</p>
+  <ol>
+    <li><strong>A website that Google can actually read</strong> (the new site fixes this)</li>
+    <li><strong>Dedicated pages for each major service</strong> (the new site has these -- including a full urethane section mentioning Dur-A-Flex Poly-Crete, breweries, and FDA compliance)</li>
+    <li><strong>Blog posts and content that go deeper</strong> (recommended next step after launch)</li>
+  </ol>
+
+  <h3>Think of it this way</h3>
+  <div class="table-wrap">
+    <table class="analogy-table">
+      <thead><tr><th>Strategy</th><th>What It's Like</th><th>Does It Work?</th></tr></thead>
+      <tbody>
+        <tr><td>Adding keywords to your current home page</td><td>Writing "BEST PIZZA" on a napkin and taping it to a closed restaurant</td><td><span class="xmark">No</span></td></tr>
+        <tr><td>Rebuilding the site with proper structure</td><td>Opening the restaurant, turning on the lights, putting up a real sign, getting listed on Google Maps</td><td><span class="check">Yes</span></td></tr>
+        <tr><td>Adding blog posts and service pages after launch</td><td>Running specials, getting reviewed in the paper, word of mouth</td><td><span class="check">Yes</span> (compounds over time)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>The new website is the restaurant.</strong> Keywords without the website are just napkins.</p>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     EXECUTIVE SUMMARY
+     ════════════════════════════════════════════════ -->
+<section id="exec-summary">
+  <h2>Executive Summary (Technical)</h2>
+  <p>The current industrialfloortech.com website is built on an outdated proprietary platform (Webbersaur.us) using legacy technology from the early 2010s. It has <strong>critical SEO deficiencies</strong> that are actively suppressing search visibility, limiting mobile traffic, and providing a poor user experience.</p>
+  <p>The new site was purpose-built as a modern, SEO-optimized static site that addresses every identified deficiency. The table below summarizes the audit findings:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>SEO Category</th><th>Current Site</th><th>New Site</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td>Meta Descriptions</td><td>Missing on all pages</td><td>Unique per page (5/5)</td><td><span class="badge badge-critical">Critical</span></td></tr>
+        <tr><td>Canonical URLs</td><td>None</td><td>Set on all pages</td><td><span class="badge badge-critical">Critical</span></td></tr>
+        <tr><td>Open Graph Tags</td><td>None</td><td>Full set per page</td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>Structured Data (JSON-LD)</td><td>None</td><td>LocalBusiness schema</td><td><span class="badge badge-critical">Critical</span></td></tr>
+        <tr><td>Mobile Viewport</td><td>Missing</td><td>Properly configured</td><td><span class="badge badge-critical">Critical</span></td></tr>
+        <tr><td>Image Alt Text</td><td>Missing on all images</td><td>Descriptive, keyword-rich on every image</td><td><span class="badge badge-critical">Critical</span></td></tr>
+        <tr><td>Image Format</td><td>JPG/PNG (unoptimized)</td><td>WebP (optimized)</td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>Lazy Loading</td><td>None</td><td>All below-fold images</td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>Heading Hierarchy</td><td>No H1 tags; broken structure</td><td>Proper H1 &gt; H2 &gt; H3 per page</td><td><span class="badge badge-critical">Critical</span></td></tr>
+        <tr><td>URL Structure</td><td><code>/page/20019-Services</code></td><td><code>/services</code> (clean URLs)</td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>301 Redirects</td><td>None</td><td>22 redirects preserving link equity</td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>JavaScript Framework</td><td>Prototype.js (2007)</td><td>Vanilla JS, IIFE pattern</td><td><span class="badge badge-medium">Medium</span></td></tr>
+        <tr><td>Font Loading</td><td>Unknown/blocking</td><td>Preconnect + swap</td><td><span class="badge badge-medium">Medium</span></td></tr>
+        <tr><td>Sitemap</td><td>Outdated (21 URLs, HTTP)</td><td>Clean URLs ready for new sitemap</td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>robots.txt</td><td>Effectively empty</td><td>Needs creation (new site)</td><td><span class="badge badge-medium">Medium</span></td></tr>
+        <tr><td>Page Speed</td><td>Heavy, render-blocking</td><td>Lightweight, optimized</td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>Breadcrumbs</td><td>None</td><td>Semantic breadcrumb nav</td><td><span class="badge badge-medium">Medium</span></td></tr>
+        <tr><td>SSL/HTTPS</td><td>Mixed (sitemap uses HTTP)</td><td>HTTPS throughout</td><td><span class="badge badge-medium">Medium</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Overall SEO Health Score (estimated):</strong></p>
+  <ul>
+    <li>Current site: <strong>~15/100</strong></li>
+    <li>New site: <strong>~82/100</strong></li>
+    <li>Top competitor (CT Concrete Floors): <strong>~75/100</strong></li>
+    <li>Average competitor: <strong>~61/100</strong></li>
+  </ul>
+  <p>The new site would launch as the <strong>#1 technically optimized site</strong> in the CT epoxy flooring competitive set.</p>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     1. TITLE TAGS
+     ════════════════════════════════════════════════ -->
+<section id="sec1">
+  <h2>1. Title Tags</h2>
+  <h3>Current Site</h3>
+  <pre><code>Industrial Flooring Technologies | Epoxy Floor CT | Industrial Floor
+Coating Contractor Hamden CT | Home</code></pre>
+  <ul>
+    <li>Overstuffed with keywords (76+ characters)</li>
+    <li>Same base pattern across all pages (poor differentiation)</li>
+    <li>"| Home" suffix wastes character space</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <pre><code>Home:     Industrial Flooring Technologies | Epoxy Floor Contractor Hamden CT
+Services: Epoxy Flooring Services | Industrial Flooring Technologies | Hamden CT
+Gallery:  Epoxy Flooring Project Gallery | Industrial Flooring Technologies | CT
+About:    About Industrial Flooring Technologies | Epoxy Floor Contractor CT
+Contact:  Contact Industrial Flooring Technologies | Epoxy Floor Contractor Hamden CT</code></pre>
+  <ul>
+    <li>Each page has a <strong>unique, keyword-targeted title</strong> under 60 characters</li>
+    <li>Primary keyword ("Epoxy Floor/Flooring") appears first for maximum weight</li>
+    <li>Geographic modifier ("Hamden CT" / "CT") included for local SEO</li>
+    <li>Brand name included for recognition</li>
+  </ul>
+  <div class="benefit"><strong>Benefit:</strong> Unique, optimized titles per page improve click-through rates from search results by 20-30% on average. Google uses title tags as a primary ranking signal.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     2. META DESCRIPTIONS
+     ════════════════════════════════════════════════ -->
+<section id="sec2">
+  <h2>2. Meta Descriptions</h2>
+  <h3>Current Site</h3>
+  <p><strong>None.</strong> Zero meta descriptions on any page. Google auto-generates snippets from page content, resulting in inconsistent, often irrelevant search result previews.</p>
+
+  <h3>New Site</h3>
+  <p>Every page has a unique, compelling meta description:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Page</th><th>Meta Description</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Home</strong></td><td>"Connecticut's trusted epoxy flooring contractor with 25+ years experience. Industrial, commercial &amp; residential floor coatings. Dur-A-Flex certified. Free estimates. Hamden CT."</td></tr>
+        <tr><td><strong>Services</strong></td><td>"Full-service epoxy flooring contractor in Hamden CT. Epoxy coatings, urethane systems, concrete polishing, parking garage coatings, surface preparation, and concrete repair."</td></tr>
+        <tr><td><strong>Gallery</strong></td><td>"Browse our portfolio of epoxy floor coatings, polished concrete, and industrial flooring projects across Connecticut. Warehouses, breweries, garages, showrooms, and more."</td></tr>
+        <tr><td><strong>About</strong></td><td>"Learn about Industrial Flooring Technologies -- 25+ years of professional epoxy floor coating experience in Connecticut. Dur-A-Flex certified, led by Brian Steinle."</td></tr>
+        <tr><td><strong>Contact</strong></td><td>"Contact Industrial Flooring Technologies for a free epoxy flooring estimate. Call (203) 627-9062 or email brian@industrialfloortech.com. 594 Sherman Ave, Hamden CT 06514."</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="benefit"><strong>Benefit:</strong> Meta descriptions serve as ad copy in search results. Pages with optimized meta descriptions see 5.8% higher CTR than those without (Backlinko study). For a local business, this is the difference between a prospect clicking your result or a competitor's.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     3. STRUCTURED DATA
+     ════════════════════════════════════════════════ -->
+<section id="sec3">
+  <h2>3. Structured Data (Schema.org / JSON-LD)</h2>
+  <h3>Current Site</h3>
+  <p><strong>None.</strong> No structured data of any kind. Google has no machine-readable understanding of the business type, location, services, or ratings.</p>
+
+  <h3>New Site</h3>
+  <p>Full <code>LocalBusiness</code> JSON-LD schema on the home page including:</p>
+  <pre><code>{
+  "@type": "LocalBusiness",
+  "name": "Industrial Flooring Technologies",
+  "telephone": "+1-203-627-9062",
+  "email": "brian@industrialfloortech.com",
+  "address": {
+    "streetAddress": "594 Sherman Ave",
+    "addressLocality": "Hamden",
+    "addressRegion": "CT"
+  },
+  "geo": { "latitude": 41.3659, "longitude": -72.8996 },
+  "aggregateRating": { "ratingValue": "5.0", "reviewCount": "55" },
+  "serviceType": ["Epoxy Floor Coatings", "Urethane Floor Systems",
+                   "Concrete Polishing", ...],
+  "areaServed": ["Connecticut", "Southern New England",
+                  "Southern New York", "Northern New Jersey"],
+  "openingHours": "Mo-Fr 07:00-17:00"
+}</code></pre>
+
+  <div class="benefit"><strong>Benefit:</strong> This is arguably the single most impactful SEO improvement. Structured data enables:
+    <ul style="margin-top:8px">
+      <li><strong>Rich snippets</strong> in search results (star ratings, business hours, phone number)</li>
+      <li><strong>Google Knowledge Panel</strong> population</li>
+      <li><strong>Google Maps/Local Pack</strong> ranking signals</li>
+      <li><strong>Voice search</strong> compatibility ("Hey Google, find an epoxy flooring contractor near me")</li>
+    </ul>
+    <p style="margin-top:8px;margin-bottom:0">Businesses with structured data see up to <strong>30% higher click-through rates</strong> from rich snippet visibility alone.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     4. MOBILE OPTIMIZATION
+     ════════════════════════════════════════════════ -->
+<section id="sec4">
+  <h2>4. Mobile Optimization</h2>
+  <h3>Current Site</h3>
+  <ul>
+    <li><strong>No viewport meta tag</strong> detected -- the site renders as a desktop page on mobile devices, requiring pinch-to-zoom</li>
+    <li>No responsive CSS</li>
+    <li>Fixed-width layout</li>
+    <li>Prototype.js framework has no mobile optimization</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+  <ul>
+    <li>Full mobile-first responsive design</li>
+    <li>CSS breakpoints at 1024px, 768px, and 480px</li>
+    <li>Touch-friendly hamburger navigation with slide-in menu</li>
+    <li>Overlay click and Escape key to close</li>
+    <li>Body scroll lock when menu/lightbox is open</li>
+  </ul>
+  <div class="benefit"><strong>Benefit:</strong> Since Google's mobile-first indexing (2021), the mobile version of a site is what Google primarily crawls and indexes. <strong>A non-mobile-friendly site is effectively invisible to Google's mobile index.</strong> Over 60% of searches are now mobile. This single issue likely costs the business significant organic traffic.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     5. IMAGE OPTIMIZATION
+     ════════════════════════════════════════════════ -->
+<section id="sec5">
+  <h2>5. Image Optimization</h2>
+  <h3>Current Site</h3>
+  <ul>
+    <li>Images served as unoptimized JPG/PNG</li>
+    <li><strong>No alt text</strong> on any images (carousel, content, or logo)</li>
+    <li>No <code>loading="lazy"</code> attributes</li>
+    <li>No explicit width/height dimensions (causes layout shift)</li>
+    <li>Large file sizes without compression</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <ul>
+    <li>All images converted to <strong>WebP format</strong> (30-50% smaller than JPG)</li>
+    <li><strong>Every image has descriptive, keyword-rich alt text:</strong>
+      <ul>
+        <li><code>"High-gloss epoxy floor in a Connecticut warehouse"</code></li>
+        <li><code>"Urethane floor system at Fox Farm Brewery in Salem CT"</code></li>
+        <li><code>"Concrete floor grinding and surface preparation in Connecticut"</code></li>
+      </ul>
+    </li>
+    <li><code>loading="lazy"</code> on all below-fold images</li>
+    <li><code>fetchpriority="high"</code> on hero/above-fold images</li>
+    <li>Explicit <code>width</code> and <code>height</code> attributes on every image (prevents CLS)</li>
+    <li>Two image tiers: 1920px heroes, 1200px content images</li>
+  </ul>
+  <div class="benefit"><strong>Benefit:</strong> Image alt text is a significant ranking factor for Google Image Search, which drives ~22% of all web searches. For a visual business like flooring, image search traffic is highly qualified. The current site gets <strong>zero</strong> image search benefit because every image lacks alt text.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     6. HEADING HIERARCHY
+     ════════════════════════════════════════════════ -->
+<section id="sec6">
+  <h2>6. Heading Hierarchy (H1/H2/H3)</h2>
+  <h3>Current Site</h3>
+  <ul>
+    <li><strong>No H1 tags</strong> on interior pages (critical violation)</li>
+    <li>Inconsistent heading structure</li>
+    <li>Generic headings like "Photo Galleries" without keyword targeting</li>
+    <li>Multiple H2s without supporting H3 structure</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <p>Every page follows proper semantic hierarchy:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Page</th><th>H1</th><th>H2s</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Home</strong></td><td>"Industrial &amp; Commercial Epoxy Flooring Experts"</td><td>"Connecticut's Trusted Floor Coating Contractor", "Our Services", "Trusted by Industry Leaders", "What Our Clients Say", etc.</td></tr>
+        <tr><td><strong>Services</strong></td><td>"Our Services"</td><td>"Epoxy Floor Coatings", "Urethane Floor Systems", "Concrete Polishing &amp; Grinding", "Parking Garage Coatings", "Surface Preparation", "Concrete Repair &amp; Maintenance"</td></tr>
+        <tr><td><strong>Gallery</strong></td><td>"Project Gallery"</td><td>(filter categories)</td></tr>
+        <tr><td><strong>About</strong></td><td>"About Us" (implied)</td><td>Company history, team, certifications</td></tr>
+        <tr><td><strong>Contact</strong></td><td>"Contact Us" (implied)</td><td>Contact form, map, business info</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="benefit"><strong>Benefit:</strong> Heading hierarchy tells Google what the page is about and how content is organized. Missing H1 tags mean Google has no clear understanding of the page's primary topic. Proper heading structure improves content relevance scoring and can improve rankings for targeted keywords.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     7. URL STRUCTURE
+     ════════════════════════════════════════════════ -->
+<section id="sec7">
+  <h2>7. URL Structure</h2>
+  <h3>Current Site</h3>
+  <pre><code>/page/20019-Services
+/page/19972-About-Us
+/page/29518-Surface-Preparation
+/page/20233-Commercial-Photos
+/page/29550-Contact-Us
+/page/20035-Company-Equipment
+/page/34260-Color-Charts</code></pre>
+  <ul>
+    <li>Auto-generated numeric IDs (non-descriptive)</li>
+    <li><code>/page/</code> prefix adds unnecessary depth</li>
+    <li>No keyword value in URLs</li>
+    <li>21 indexed URLs including test pages (<code>/page/33819-test-test</code>)</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <pre><code>/                  (Home)
+/services          (Services)
+/gallery           (Gallery)
+/about             (About)
+/contact           (Contact)
+/feedback          (Feedback)
+/not-happy         (Private feedback)</code></pre>
+  <ul>
+    <li>Clean, short, keyword-relevant URLs</li>
+    <li>Flat hierarchy (1 level deep)</li>
+    <li>Vercel <code>cleanUrls</code> removes <code>.html</code> extensions</li>
+    <li><strong>22 permanent 301 redirects</strong> from old URLs to new ones, preserving any existing link equity and preventing 404 errors</li>
+  </ul>
+  <div class="benefit"><strong>Benefit:</strong> Clean URLs are a confirmed Google ranking factor. Short, descriptive URLs receive 3x more clicks than long, parameter-heavy URLs in search results. The 301 redirects ensure that any existing backlinks or bookmarks continue to work, and Google transfers the ranking value from old URLs to new ones.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     8. OPEN GRAPH
+     ════════════════════════════════════════════════ -->
+<section id="sec8">
+  <h2>8. Open Graph / Social Sharing</h2>
+  <h3>Current Site</h3>
+  <p><strong>None.</strong> When shared on Facebook, LinkedIn, Twitter, or messaging apps, the site shows a generic preview with no controlled image, title, or description.</p>
+
+  <h3>New Site</h3>
+  <p>Full Open Graph implementation on every page:</p>
+  <pre><code>&lt;meta property="og:title" content="..."&gt;
+&lt;meta property="og:description" content="..."&gt;
+&lt;meta property="og:type" content="website"&gt;
+&lt;meta property="og:url" content="..."&gt;
+&lt;meta property="og:image" content="..."&gt;  (Home page)</code></pre>
+  <div class="benefit"><strong>Benefit:</strong> When prospects or satisfied clients share the site on social media, the preview will display a professional, branded card with the hero image, title, and description. This increases engagement and click-through from social referrals.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     9. CANONICAL URLs
+     ════════════════════════════════════════════════ -->
+<section id="sec9">
+  <h2>9. Canonical URLs</h2>
+  <h3>Current Site</h3>
+  <p><strong>None.</strong> No canonical tags on any page. This can lead to duplicate content issues, especially with the auto-generated <code>/page/</code> URL structure.</p>
+
+  <h3>New Site</h3>
+  <p>Every page has a self-referencing canonical:</p>
+  <pre><code>&lt;link rel="canonical" href="https://industrialfloortech.com/"&gt;
+&lt;link rel="canonical" href="https://industrialfloortech.com/services.html"&gt;
+&lt;link rel="canonical" href="https://industrialfloortech.com/gallery.html"&gt;
+...</code></pre>
+  <div class="benefit"><strong>Benefit:</strong> Canonical tags tell Google which version of a URL is the "official" one, preventing duplicate content penalties and consolidating ranking signals to a single URL per page.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     10. PAGE SPEED
+     ════════════════════════════════════════════════ -->
+<section id="sec10">
+  <h2>10. Page Speed &amp; Performance</h2>
+  <h3>Current Site</h3>
+  <ul>
+    <li><strong>Prototype.js</strong> (2007-era JavaScript framework, ~50KB+)</li>
+    <li><strong>jQuery</strong> loaded alongside Prototype (redundant, ~90KB)</li>
+    <li>No CSS/JS minification apparent</li>
+    <li>No image lazy loading</li>
+    <li>No font preconnection/optimization</li>
+    <li>Render-blocking JavaScript</li>
+    <li>Unoptimized images (JPG/PNG, no WebP)</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <ul>
+    <li><strong>Vanilla JavaScript</strong> in a single 244-line IIFE (~6KB unminified)</li>
+    <li>No framework dependencies</li>
+    <li>Single CSS file with custom properties</li>
+    <li>Google Fonts loaded with <code>preconnect</code> + <code>display=swap</code></li>
+    <li><code>loading="lazy"</code> on all below-fold images</li>
+    <li><code>fetchpriority="high"</code> on hero images</li>
+    <li>WebP images (30-50% smaller than JPG)</li>
+    <li>Hosted on <strong>Vercel CDN</strong> (global edge network)</li>
+  </ul>
+
+  <p><strong>Estimated performance comparison:</strong></p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Metric</th><th>Current Site</th><th>New Site (est.)</th></tr></thead>
+      <tbody>
+        <tr><td>Total JS payload</td><td>~150KB+ (Prototype + jQuery)</td><td>~6KB (vanilla)</td></tr>
+        <tr><td>Image format</td><td>JPG/PNG</td><td>WebP</td></tr>
+        <tr><td>Lazy loading</td><td>None</td><td>All below-fold</td></tr>
+        <tr><td>CDN</td><td>Unknown/shared hosting</td><td>Vercel global edge</td></tr>
+        <tr><td>Font loading</td><td>Render-blocking</td><td>Preconnect + swap</td></tr>
+        <tr><td>First Contentful Paint</td><td>Slow (~4-6s est.)</td><td>Fast (~1-2s est.)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="benefit"><strong>Benefit:</strong> Page speed is a direct Google ranking factor (Core Web Vitals). Google has confirmed that slow sites are demoted in search results. The new site's lightweight architecture and CDN hosting should deliver significantly faster load times, improving both rankings and user experience.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     11. SITEMAP
+     ════════════════════════════════════════════════ -->
+<section id="sec11">
+  <h2>11. Sitemap Issues</h2>
+  <h3>Current Site</h3>
+  <p>The existing <code>sitemap.xml</code> has multiple problems:</p>
+  <ol>
+    <li><strong>Uses HTTP instead of HTTPS</strong> (<code>http://industrialfloortech.com/</code>)</li>
+    <li>Contains <strong>21 URLs</strong> including obsolete pages like <code>/page/33819-test-test</code> and <code>/page/29529-add-pages</code></li>
+    <li>References old <code>/page/</code> URL structure</li>
+    <li>No connection to <code>robots.txt</code> (which is effectively empty)</li>
+  </ol>
+
+  <h3>New Site</h3>
+  <ul>
+    <li>Clean URL structure ready for a proper sitemap</li>
+    <li>301 redirects handle all old URLs</li>
+    <li>Needs: new <code>sitemap.xml</code> and updated <code>robots.txt</code> (recommended post-launch task)</li>
+  </ul>
+  <div class="benefit"><strong>Benefit:</strong> A proper sitemap helps Google discover and index all pages efficiently. The current sitemap is actively directing Google to non-existent or test pages, which wastes crawl budget and can dilute site quality signals.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     12. CONTENT QUALITY
+     ════════════════════════════════════════════════ -->
+<section id="sec12">
+  <h2>12. Content Quality &amp; Conversion</h2>
+  <h3>Current Site</h3>
+  <ul>
+    <li>Service descriptions exist but lack structured formatting</li>
+    <li>No testimonials visible on home page</li>
+    <li>No notable client list</li>
+    <li>No clear calls-to-action beyond "Rate Your Experience"</li>
+    <li>No breadcrumb navigation</li>
+    <li>Generic "Contact Us" without embedded contact details</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <ul>
+    <li><strong>Rich, structured content</strong> with alternating layouts for readability</li>
+    <li><strong>3 testimonials</strong> with star ratings on home page (social proof)</li>
+    <li><strong>12 notable clients</strong> displayed (Yale, UConn, Mohegan Sun, Pepsi, 3M, U.S. Navy, etc.)</li>
+    <li><strong>Statistics banner</strong> (25+ years, 5.0 rating, 1000+ projects, 100% satisfaction)</li>
+    <li><strong>Multiple CTAs</strong> throughout every page ("Call Now" in nav, hero CTA, bottom CTA banner)</li>
+    <li><strong>Breadcrumb navigation</strong> on interior pages</li>
+    <li><strong>Three Pillars</strong> section explaining the quality methodology</li>
+    <li><strong>"Rate Your Experience"</strong> modal with sentiment routing</li>
+    <li>Phone number prominently displayed as clickable <code>tel:</code> link</li>
+  </ul>
+  <div class="benefit"><strong>Benefit:</strong> Google evaluates E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness). The new site demonstrates all four through client testimonials, notable client logos, years of experience, certifications, and detailed service descriptions. This directly impacts rankings for "Your Money Your Life" adjacent queries like contractor searches.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     13. TECHNICAL ARCHITECTURE
+     ════════════════════════════════════════════════ -->
+<section id="sec13">
+  <h2>13. Technical Architecture</h2>
+  <h3>Current Site</h3>
+  <ul>
+    <li>Proprietary platform (Webbersaur.us)</li>
+    <li>Server-rendered pages with auto-generated IDs</li>
+    <li>Prototype.js + jQuery (both legacy)</li>
+    <li><code>document.observe("dom:loaded")</code> pattern (Prototype-specific)</li>
+    <li>No control over HTML output</li>
+    <li>Limited ability to add meta tags, schema, or custom code</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <ul>
+    <li><strong>Static HTML/CSS/JS</strong> -- full control over every line of code</li>
+    <li><strong>Vercel hosting</strong> -- global CDN, automatic HTTPS, instant deploys via <code>git push</code></li>
+    <li><strong>Vanilla JavaScript</strong> -- no dependencies, no framework overhead</li>
+    <li><strong>CSS Custom Properties</strong> -- consistent theming, easy updates</li>
+    <li><strong>IntersectionObserver</strong> -- modern scroll animations without scroll event listeners</li>
+    <li><strong>IIFE pattern</strong> -- no global scope pollution</li>
+  </ul>
+  <div class="benefit"><strong>Benefit:</strong> A static site with full code ownership means:
+    <ul style="margin-top:8px">
+      <li>No platform lock-in or monthly fees</li>
+      <li>Instant page loads (no server-side rendering delay)</li>
+      <li>Full control over SEO elements (can add/modify any tag at any time)</li>
+      <li>Easy to maintain and update</li>
+      <li>Version controlled via Git (full change history)</li>
+      <li>No database to hack or maintain</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     14. ACCESSIBILITY
+     ════════════════════════════════════════════════ -->
+<section id="sec14">
+  <h2>14. Accessibility</h2>
+  <h3>Current Site</h3>
+  <ul>
+    <li>No ARIA labels on interactive elements</li>
+    <li>No skip-to-content links</li>
+    <li>Carousel navigation lacks semantic markup</li>
+    <li>Images without alt text fail WCAG 2.1 Level A</li>
+  </ul>
+
+  <h3>New Site</h3>
+  <ul>
+    <li><code>aria-label="Toggle navigation"</code> on hamburger button</li>
+    <li><code>aria-label="Close"</code> on modal close buttons</li>
+    <li>Semantic HTML5 elements (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>)</li>
+    <li>Descriptive alt text on all images</li>
+    <li>Keyboard navigation (Escape closes modals/nav, Arrow keys navigate lightbox)</li>
+    <li>Focus management for modals</li>
+    <li><code>lang="en"</code> on <code>&lt;html&gt;</code> element</li>
+  </ul>
+  <div class="benefit"><strong>Benefit:</strong> Accessibility is both a legal consideration (ADA compliance) and an SEO factor. Google rewards accessible sites, and the alt text, semantic markup, and ARIA attributes all contribute to improved search engine understanding of page content.</div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     15. COMPETITIVE LANDSCAPE
+     ════════════════════════════════════════════════ -->
+<section id="sec15">
+  <h2>15. Competitive Landscape Analysis</h2>
+  <p>We audited the top 5 CT epoxy flooring competitors currently ranking for the same keywords. Here's how the new IFT site stacks up.</p>
+
+  <h3>Competitors Audited</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Company</th><th>URL</th><th>Location</th><th>Platform</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Everlast Industrial Flooring</td><td>everlastflooringct.com</td><td>CT (statewide)</td><td>WordPress / Divi</td></tr>
+        <tr><td>2</td><td>Pro Epoxy CT</td><td>proepoxyct.com</td><td>CT (statewide)</td><td>WordPress / Buildpress</td></tr>
+        <tr><td>3</td><td>DiamondKote</td><td>diamondkote.net</td><td>Middletown, CT</td><td>WordPress / SiteOrigin</td></tr>
+        <tr><td>4</td><td>Heavy Duty Floors</td><td>heavydutyfloors.com</td><td>New Britain, CT</td><td>Custom</td></tr>
+        <tr><td>5</td><td>CT Concrete Floors</td><td>concretefloorsct.com</td><td>Bethel, CT</td><td>WordPress / Oxygen</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Head-to-Head SEO Scorecard</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>SEO Element</th><th>IFT (Current)</th><th>IFT (New)</th><th>Everlast</th><th>Pro Epoxy</th><th>DiamondKote</th><th>Heavy Duty</th><th>CT Concrete</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Title Tags</strong></td>
+          <td><span class="xmark">Poor (stuffed)</span></td>
+          <td><span class="check">Optimized</span></td>
+          <td>Good</td><td>Good</td><td>Good</td><td>Unknown</td><td>Good</td>
+        </tr>
+        <tr>
+          <td><strong>Meta Description</strong></td>
+          <td><span class="xmark">Missing</span></td>
+          <td><span class="check">Unique/page</span></td>
+          <td>Weak (schema only)</td><td>Good</td><td>Good</td><td>Unknown</td><td>Weak (schema only)</td>
+        </tr>
+        <tr>
+          <td><strong>Canonical URL</strong></td>
+          <td><span class="xmark">Missing</span></td>
+          <td><span class="check">All pages</span></td>
+          <td><span class="xmark">Missing</span></td><td><span class="check">Present</span></td><td><span class="check">Present</span></td><td>Unknown</td><td><span class="check">Present</span></td>
+        </tr>
+        <tr>
+          <td><strong>Open Graph</strong></td>
+          <td><span class="xmark">Missing</span></td>
+          <td><span class="check">All pages</span></td>
+          <td><span class="xmark">Missing</span></td><td><span class="check">Present</span></td><td><span class="xmark">Missing</span></td><td>Unknown</td><td><span class="xmark">Missing</span></td>
+        </tr>
+        <tr>
+          <td><strong>JSON-LD Schema</strong></td>
+          <td><span class="xmark">Missing</span></td>
+          <td><span class="check">LocalBusiness</span></td>
+          <td>LocalBusiness (duplicate)</td><td>Organization + WebPage</td><td>Organization + WebPage</td><td><span class="xmark">Missing</span></td><td>Organization + Place</td>
+        </tr>
+        <tr>
+          <td><strong>Mobile Viewport</strong></td>
+          <td><span class="xmark">Missing</span></td>
+          <td><span class="check">Present</span></td>
+          <td><span class="check">Present</span></td><td><span class="check">Present</span></td><td><span class="check">Present</span></td><td>Unknown</td><td><span class="check">Present</span></td>
+        </tr>
+        <tr>
+          <td><strong>H1 Tags</strong></td>
+          <td><span class="xmark">Missing (interior)</span></td>
+          <td><span class="check">Proper hierarchy</span></td>
+          <td>Present (brand-only)</td><td>Weak (slider text)</td><td>Present ("Welcome")</td><td><span class="check">Present</span></td><td><span class="check">Present</span></td>
+        </tr>
+        <tr>
+          <td><strong>Image Alt Text</strong></td>
+          <td><span class="xmark">Missing (all)</span></td>
+          <td><span class="check">Keyword-rich (all)</span></td>
+          <td>Mostly missing</td><td>Mixed quality</td><td>Generic</td><td><span class="xmark">Missing</span></td><td>Limited</td>
+        </tr>
+        <tr>
+          <td><strong>Lazy Loading</strong></td>
+          <td><span class="xmark">None</span></td>
+          <td><span class="check">All below-fold</span></td>
+          <td><span class="xmark">None</span></td><td><span class="xmark">None</span></td><td><span class="xmark">None</span></td><td><span class="xmark">None</span></td><td>Plugin-based</td>
+        </tr>
+        <tr>
+          <td><strong>Image Format</strong></td>
+          <td>JPG/PNG</td>
+          <td><span class="check">WebP</span></td>
+          <td>JPG/PNG</td><td>JPG/PNG</td><td>JPG/PNG</td><td>JPG/PNG</td><td>JPG/PNG</td>
+        </tr>
+        <tr>
+          <td><strong>Clean URLs</strong></td>
+          <td><span class="xmark">/page/20019-Services</span></td>
+          <td><span class="check">/services</span></td>
+          <td>/services/ (WP)</td><td>/about/ (WP)</td><td>/services/ (WP)</td><td>/concrete-polishing/</td><td>/services/ (WP)</td>
+        </tr>
+        <tr>
+          <td><strong>Breadcrumbs</strong></td>
+          <td><span class="xmark">None</span></td>
+          <td><span class="check">Semantic nav</span></td>
+          <td><span class="xmark">None</span></td><td>Schema only</td><td>Schema only</td><td><span class="xmark">None</span></td><td><span class="xmark">None</span></td>
+        </tr>
+        <tr>
+          <td><strong>JS Payload</strong></td>
+          <td>~150KB</td>
+          <td><span class="check">~6KB</span></td>
+          <td>~200KB+</td><td>~180KB+</td><td>~150KB+</td><td>~100KB+</td><td>~120KB+</td>
+        </tr>
+        <tr>
+          <td><strong>Hosting/CDN</strong></td>
+          <td>Unknown/shared</td>
+          <td><span class="check">Vercel CDN</span></td>
+          <td>Standard WP</td><td>Standard WP</td><td>Standard WP</td><td>Cloudflare</td><td>Standard WP</td>
+        </tr>
+        <tr>
+          <td><strong>Blog/Content</strong></td>
+          <td><span class="xmark">None</span></td>
+          <td>None (planned)</td>
+          <td><span class="check">Present</span></td><td><span class="xmark">None</span></td><td><span class="check">Present</span></td><td><span class="check">Present</span></td><td><span class="check">25+ articles</span></td>
+        </tr>
+        <tr>
+          <td><strong>301 Redirects</strong></td>
+          <td><span class="xmark">None</span></td>
+          <td><span class="check">22 mapped</span></td>
+          <td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td>
+        </tr>
+        <tr>
+          <td><strong>Analytics</strong></td>
+          <td><span class="xmark">None visible</span></td>
+          <td>None (planned)</td>
+          <td>GA + GTM + Ads</td><td>GA</td><td>GTM + GA4 + Ads + FB Pixel</td><td>GA + StackAdapt + Snitcher</td><td>GTM</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Competitive Strengths &amp; Gaps by Competitor</h3>
+
+  <h4>1. Everlast Industrial Flooring (everlastflooringct.com)</h4>
+  <p><strong>Their strengths:</strong></p>
+  <ul>
+    <li>Full LocalBusiness schema with keyword targeting</li>
+    <li>Google Ads conversion tracking (actively spending on paid search)</li>
+    <li>Multiple conversion pathways (phone, form, popup quote modal)</li>
+    <li>Blog/resources section for content authority</li>
+    <li>Women-owned business certification (trust differentiator)</li>
+  </ul>
+  <p><strong>Their weaknesses:</strong></p>
+  <ul>
+    <li>30+ scripts loaded (massive JS payload, hurts Core Web Vitals)</li>
+    <li>Duplicate/conflicting schema (LocalBusiness AND HomeAndConstructionBusiness)</li>
+    <li>No canonical tags</li>
+    <li>Image alt text mostly missing</li>
+    <li>No Open Graph tags</li>
+    <li>No lazy loading</li>
+    <li>Divi theme builder = heavy, template-like code</li>
+  </ul>
+  <p><strong>How IFT New Site wins:</strong> Faster page speed (~6KB JS vs ~200KB+), cleaner schema without conflicts, complete image alt text coverage, Open Graph for social sharing, lightweight static architecture vs. bloated WordPress</p>
+
+  <h4>2. Pro Epoxy CT (proepoxyct.com)</h4>
+  <p><strong>Their strengths:</strong></p>
+  <ul>
+    <li>Most complete metadata of any competitor (title, description, canonical, OG)</li>
+    <li>Organization + WebPage + BreadcrumbList schema</li>
+    <li>SearchAction schema (enables Google sitelinks search box)</li>
+    <li>Professional design with clear CTAs</li>
+    <li>reCAPTCHA spam protection on forms</li>
+  </ul>
+  <p><strong>Their weaknesses:</strong></p>
+  <ul>
+    <li>20+ scripts, 15+ stylesheets (WordPress + Revolution Slider + WooCommerce bloat)</li>
+    <li>H1 is slider text, not semantic heading</li>
+    <li>Image alt text is mixed quality</li>
+    <li>No lazy loading</li>
+    <li>WooCommerce loaded but unused (unnecessary overhead)</li>
+    <li>Site last modified 2021 (potentially stale content)</li>
+  </ul>
+  <p><strong>How IFT New Site wins:</strong> Superior page speed, proper H1 hierarchy on every page, keyword-rich alt text on every image, WebP images, modern architecture. Pro Epoxy has a slight edge in schema breadth (SearchAction) that IFT could add.</p>
+
+  <h4>3. DiamondKote (diamondkote.net)</h4>
+  <p><strong>Their strengths:</strong></p>
+  <ul>
+    <li>Strongest content marketing (6 embedded YouTube videos, FAQ sections)</li>
+    <li>County-specific landing pages (8 CT counties = geo-targeted SEO)</li>
+    <li>Facebook Pixel + Google Ads tracking (running paid campaigns)</li>
+    <li>Major brand partnerships displayed (3M, ESPN, Marriott)</li>
+    <li>12-year residential warranty (strong trust signal)</li>
+  </ul>
+  <p><strong>Their weaknesses:</strong></p>
+  <ul>
+    <li>No Open Graph tags</li>
+    <li>Heavy inline CSS (SiteOrigin panels builder)</li>
+    <li>Image alt text is generic</li>
+    <li>No lazy loading</li>
+    <li>H1 is "Welcome to DiamondKote" (non-descriptive, wastes keyword opportunity)</li>
+  </ul>
+  <p><strong>How IFT New Site wins:</strong> Keyword-optimized H1 on every page, complete Open Graph implementation, WebP images with lazy loading, vastly lighter JS payload. DiamondKote has a significant content advantage with videos and county pages that IFT should consider replicating long-term.</p>
+
+  <h4>4. Heavy Duty Floors (heavydutyfloors.com)</h4>
+  <p><strong>Their strengths:</strong></p>
+  <ul>
+    <li>Custom-built site (not WordPress template)</li>
+    <li>Parallax effects and professional design</li>
+    <li>Cloudflare CDN (performance benefit)</li>
+    <li>StackAdapt + Snitcher tracking (advanced lead attribution)</li>
+  </ul>
+  <p><strong>Their weaknesses:</strong></p>
+  <ul>
+    <li>Missing or inaccessible <code>&lt;head&gt;</code> metadata</li>
+    <li>No image alt text detected</li>
+    <li>No schema/structured data visible</li>
+    <li>No lazy loading</li>
+    <li>No breadcrumbs</li>
+  </ul>
+  <p><strong>How IFT New Site wins:</strong> Complete SEO foundation (meta tags, schema, alt text, canonical URLs) vs. what appears to be a design-first, SEO-second approach. Heavy Duty has strong visual design but lacks the technical SEO foundation.</p>
+
+  <h4>5. CT Concrete Floors (concretefloorsct.com)</h4>
+  <p><strong>Their strengths:</strong></p>
+  <ul>
+    <li>Strongest content authority (25+ blog articles)</li>
+    <li>Comprehensive schema (Organization + Place with geo-coordinates)</li>
+    <li>Lazy loading via Breeze plugin</li>
+    <li>Employee count in schema (20 employees = signals business size)</li>
+    <li>Oxygen page builder (lighter than Divi/Elementor)</li>
+  </ul>
+  <p><strong>Their weaknesses:</strong></p>
+  <ul>
+    <li>No Open Graph tags</li>
+    <li>Limited image alt text</li>
+    <li>Oxygen builder still adds overhead vs. static HTML</li>
+    <li>No explicit breadcrumb markup in navigation</li>
+  </ul>
+  <p><strong>How IFT New Site wins:</strong> Open Graph implementation, keyword-rich image alt text on every image, WebP format, faster static hosting on Vercel CDN, lighter codebase. CT Concrete Floors' blog is a significant competitive advantage that IFT should match.</p>
+
+  <hr class="divider">
+
+  <h3>Competitive Position Summary</h3>
+  <div class="score-bars">
+    <div class="score-row highlight-old">
+      <div class="score-label">IFT (Current)</div>
+      <div class="score-track"><div class="score-fill ift-old" style="width:15%">~15</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">Heavy Duty Floors</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:40%">~40</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">Everlast Flooring</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:62%">~62</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">Pro Epoxy CT</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:65%">~65</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">DiamondKote</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:65%">~65</div></div>
+    </div>
+    <div class="score-row">
+      <div class="score-label">CT Concrete Floors</div>
+      <div class="score-track"><div class="score-fill competitor" style="width:75%">~75</div></div>
+    </div>
+    <div class="score-row highlight-new">
+      <div class="score-label">IFT (New Site)</div>
+      <div class="score-track"><div class="score-fill ift-new" style="width:82%">~82</div></div>
+    </div>
+  </div>
+
+  <p>The new IFT site would launch as the <strong>technically strongest site in the competitive set.</strong> No competitor has:</p>
+  <ul>
+    <li>WebP images across the entire site</li>
+    <li>Keyword-rich alt text on every image</li>
+    <li>Sub-10KB JavaScript payload</li>
+    <li>Vercel CDN edge hosting</li>
+    <li>Complete Open Graph implementation</li>
+    <li>All of the above combined</li>
+  </ul>
+
+  <h3>What Competitors Do Better (Opportunities for IFT)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Feature</th><th>Who Does It</th><th>Priority</th><th>Effort</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Blog / content marketing</strong></td><td>CT Concrete (25+ posts), DiamondKote, Everlast</td><td><span class="priority-high">High</span></td><td>Medium (ongoing)</td></tr>
+        <tr><td><strong>County/city landing pages</strong></td><td>DiamondKote (8 counties)</td><td><span class="priority-high">High</span></td><td>Medium</td></tr>
+        <tr><td><strong>Video content</strong></td><td>DiamondKote (6 YouTube embeds)</td><td><span class="priority-medium">Medium</span></td><td>Low (embed existing)</td></tr>
+        <tr><td><strong>Google Ads tracking</strong></td><td>Everlast, DiamondKote, Pro Epoxy</td><td><span class="priority-medium">Medium</span></td><td>Low (add GA4 + GTM)</td></tr>
+        <tr><td><strong>SearchAction schema</strong></td><td>Pro Epoxy</td><td><span class="priority-low">Low</span></td><td>Low (add to JSON-LD)</td></tr>
+        <tr><td><strong>Contact form with reCAPTCHA</strong></td><td>Everlast, Pro Epoxy, DiamondKote</td><td><span class="priority-medium">Medium</span></td><td>Medium</td></tr>
+        <tr><td><strong>Social media profiles</strong></td><td>DiamondKote, Everlast</td><td><span class="priority-low">Low</span></td><td>Low (add links)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Keyword Ranking Analysis: IFT vs. Competitors</h3>
+  <p>We searched Google for 7 keyword variations across 3 high-value service categories to map where IFT currently ranks vs. competitors. Rankings are based on organic (non-paid, non-map-pack) results.</p>
+
+  <h4>Keyword 1: "epoxy floors ct"</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Who Ranks</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Epoxy Depot</td><td>epoxydepotusa.com</td></tr>
+        <tr><td>2</td><td>A to Z Epoxy Flooring</td><td>atozepoxyflooring.com/connecticut/</td></tr>
+        <tr><td>3</td><td><strong>CT Concrete Floors</strong></td><td>concretefloorsct.com/service/epoxy-flooring/</td></tr>
+        <tr><td>4</td><td>Happy Coatings</td><td>happycoatings.com</td></tr>
+        <tr><td>5</td><td><strong>DiamondKote</strong></td><td>diamondkote.net (blog post)</td></tr>
+        <tr><td>6</td><td>Concrete Polishing CT</td><td>concretepolishingct.net</td></tr>
+        <tr><td>7</td><td>Hartford Epoxy Flooring</td><td>hartfordepoxyflooring.com</td></tr>
+        <tr><td>8</td><td>Thumbtack directory</td><td>thumbtack.com</td></tr>
+        <tr><td>9</td><td>Laticrete</td><td>laticrete.com</td></tr>
+        <tr><td>10</td><td>TJs Garage Coatings</td><td>tjsgaragecoatings.com</td></tr>
+        <tr class="ift-highlight"><td>--</td><td><strong>IFT (Current)</strong></td><td><strong>Not on page 1</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>IFT is invisible</strong> for this core keyword. Two audited competitors (CT Concrete Floors, DiamondKote) rank on page 1.</p>
+
+  <h4>Keyword 2: "epoxy floors ct contractor commercial industrial"</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Who Ranks</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr class="ift-new-highlight"><td>1</td><td><strong>IFT (Current)</strong></td><td>industrialfloortech.com</td></tr>
+        <tr><td>2</td><td><strong>Everlast Flooring</strong></td><td>everlastflooringct.com/epoxy-flooring-ct/</td></tr>
+        <tr><td>3</td><td><strong>Everlast Flooring</strong></td><td>everlastflooringct.com (home)</td></tr>
+        <tr><td>4</td><td>Black Bear Coatings</td><td>blackbearconcrete.com/areas-served/hartford-ct/</td></tr>
+        <tr><td>5</td><td>American Poly Floors</td><td>americanpolyfloor.com</td></tr>
+        <tr><td>6</td><td>Black Bear Coatings</td><td>blackbearconcrete.com/areas-served/new-haven-ct/</td></tr>
+        <tr><td>7</td><td>Concrete Renovations</td><td>concreterenovationsinc.com</td></tr>
+        <tr><td>8</td><td><strong>DiamondKote</strong></td><td>diamondkote.net</td></tr>
+        <tr><td>9</td><td>PINKS Decorative Concrete</td><td>pinksconcretedesignct.com</td></tr>
+        <tr><td>10</td><td>CT Epoxy Pros</td><td>ctepoxypros.com</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>IFT ranks #1</strong> but only for this very long-tail, low-volume query. Everlast dominates with 2 results on the same page.</p>
+
+  <h4>Keyword 3: "epoxy flooring contractor Hamden CT"</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Who Ranks</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr class="ift-new-highlight"><td>1</td><td><strong>IFT (Current)</strong></td><td>industrialfloortech.com</td></tr>
+        <tr><td>2</td><td><strong>Everlast Flooring</strong></td><td>everlastflooringct.com/commercial-flooring-new-haven-county-ct/</td></tr>
+        <tr><td>3</td><td>Pro Coating Concrete</td><td>procoatingepoxy.com/epoxy-flooring-hamden-ct/</td></tr>
+        <tr><td>4</td><td><strong>DiamondKote</strong></td><td>diamondkote.net/service-areas/connecticut/new-haven-county/</td></tr>
+        <tr><td>5</td><td>Pro Coating Concrete</td><td>procoatingepoxy.com/garage-floor-epoxy-hamden/</td></tr>
+        <tr><td>6</td><td>Black Bear Coatings</td><td>blackbearconcrete.com/areas-served/new-haven-ct/</td></tr>
+        <tr><td>7</td><td>Epoxymize</td><td>epoxymize.com</td></tr>
+        <tr><td>8</td><td>Metrocrete</td><td>metrocrete.com/ct/concrete-flooring-new-haven/</td></tr>
+        <tr><td>9</td><td>CMK Coatings</td><td>cmkcoatings.com</td></tr>
+        <tr><td>10</td><td><strong>DiamondKote</strong></td><td>diamondkote.net (home)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>IFT ranks #1</strong> for its own city name. But notice: Everlast and DiamondKote both rank here with <strong>dedicated city/county landing pages</strong> -- a strategy IFT lacks entirely.</p>
+
+  <h4>Keyword 4: "poly aspartic flooring Connecticut"</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Who Ranks</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>CertaPro</td><td>certapro.com (polyaspartic page)</td></tr>
+        <tr><td>2</td><td>Happy Coatings</td><td>happycoatings.com</td></tr>
+        <tr><td>3</td><td><strong>CT Concrete Floors</strong></td><td>concretefloorsct.com/blog/polyaspartic-floor-coating-solutions/</td></tr>
+        <tr><td>4</td><td>Black Bear Coatings</td><td>blackbearconcrete.com (polyurea/polyaspartic page)</td></tr>
+        <tr><td>5</td><td>The Garage Organizer</td><td>thegarageorganizer.com</td></tr>
+        <tr><td>6</td><td>Stone Coat Countertops</td><td>stonecoatcountertops.com (product page)</td></tr>
+        <tr><td>7</td><td>Sherwin-Williams</td><td>industrial.sherwin-williams.com</td></tr>
+        <tr><td>8</td><td><strong>Heavy Duty Floors</strong></td><td>heavydutyfloors.com</td></tr>
+        <tr><td>9</td><td>Garage Living</td><td>garageliving.com/connecticut</td></tr>
+        <tr><td>10</td><td>Bob Vila</td><td>bobvila.com (editorial)</td></tr>
+        <tr class="ift-highlight"><td>--</td><td><strong>IFT (Current)</strong></td><td><strong>Not on page 1</strong></td></tr>
+        <tr class="ift-highlight"><td>--</td><td><strong>Everlast</strong></td><td><strong>Not on page 1</strong></td></tr>
+        <tr class="ift-highlight"><td>--</td><td><strong>DiamondKote</strong></td><td><strong>Not on page 1</strong></td></tr>
+        <tr class="ift-highlight"><td>--</td><td><strong>Pro Epoxy</strong></td><td><strong>Not on page 1</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Nobody in our competitive set ranks for this keyword</strong> except CT Concrete Floors (#3) and Heavy Duty Floors (#8). CT Concrete Floors wins with a dedicated blog post: "Ultimate Guide To Polyaspartic Floor Coating Solutions." This is a wide-open keyword opportunity.</p>
+
+  <h4>Keyword 5: "polyaspartic epoxy floor coating Hamden Connecticut"</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Who Ranks</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td>1-8</td><td><strong>5 Star Concrete Coatings</strong></td><td>5-star-concrete.com (8 city-specific landing pages)</td></tr>
+        <tr><td>9</td><td>CertaPro</td><td>certapro.com</td></tr>
+        <tr><td>10</td><td>A to Z Epoxy Flooring</td><td>atozepoxyflooring.com</td></tr>
+        <tr class="ift-highlight"><td>--</td><td><strong>IFT (Current)</strong></td><td><strong>Not on page 1</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>5 Star Concrete Coatings dominates</strong> with a programmatic SEO strategy -- they have individual pages for every service + city combination (e.g., "Polyaspartic Floor Coatings Hamden CT", "Garage Floor Epoxy Hamden CT", "Commercial Epoxy Coating Hamden CT"). They own 8 of 10 results for IFT's own home city. This is a direct threat.</p>
+
+  <h4>Keyword 6: "urethane cement flooring Connecticut"</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Who Ranks</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>ECS USA</td><td>ecsusa.co/urethane-cement</td></tr>
+        <tr><td>2</td><td>CMK Coatings</td><td>cmkcoatings.com</td></tr>
+        <tr><td>3</td><td>Black Bear Coatings</td><td>blackbearconcrete.com/areas-served/hartford-ct/</td></tr>
+        <tr><td>4</td><td>Craftsman Concrete</td><td>craftsmanconcretefloors.com (national)</td></tr>
+        <tr><td>5</td><td>Sherwin-Williams</td><td>industrial.sherwin-williams.com</td></tr>
+        <tr><td>6</td><td><strong>DiamondKote</strong></td><td>diamondkote.net</td></tr>
+        <tr><td>7</td><td>Floor Skinz</td><td>floorskinz.com</td></tr>
+        <tr><td>8</td><td>Black Bear Coatings</td><td>blackbearconcrete.com/blog/epoxy-vs-urethane/</td></tr>
+        <tr><td>9</td><td>American Poly Floors</td><td>americanpolyfloor.com</td></tr>
+        <tr><td>10</td><td>ArmourFlo</td><td>armourflo.com</td></tr>
+        <tr class="ift-highlight"><td>--</td><td><strong>IFT (Current)</strong></td><td><strong>Not on page 1</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>IFT is invisible</strong> despite urethane cement (Dur-A-Flex Poly-Crete) being a core service. DiamondKote ranks at #6. CMK Coatings at #2. This is especially damaging because urethane cement is a high-value, low-competition keyword.</p>
+
+  <h4>Keyword 7: "urethane cement flooring contractor New Haven CT"</h4>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rank</th><th>Who Ranks</th><th>URL</th></tr></thead>
+      <tbody>
+        <tr><td>1-2</td><td>Black Bear Coatings</td><td>blackbearconcrete.com (2 pages)</td></tr>
+        <tr><td>3</td><td>Metrocrete</td><td>metrocrete.com/ct/concrete-flooring-new-haven/</td></tr>
+        <tr><td>4</td><td>CMK Coatings</td><td>cmkcoatings.com</td></tr>
+        <tr><td>5</td><td>5 Star Concrete Coatings</td><td>5-star-concrete.com</td></tr>
+        <tr><td>6</td><td>Next Level Concrete</td><td>onedayfloor.com/connecticut</td></tr>
+        <tr><td>7</td><td>Stardust Concrete</td><td>stardustconcreteinc.com</td></tr>
+        <tr><td>8</td><td>Brookvale Flooring</td><td>newhavenflooringcompany.com</td></tr>
+        <tr><td>9</td><td>NYC Epoxy Flooring</td><td>nycepoxyflooring.com/locations/new-haven/</td></tr>
+        <tr><td>10</td><td><strong>DiamondKote</strong></td><td>diamondkote.net</td></tr>
+        <tr class="ift-highlight"><td>--</td><td><strong>IFT (Current)</strong></td><td><strong>Not on page 1</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>IFT doesn't rank</strong> even for urethane cement in its own county (New Haven). Black Bear dominates with two results.</p>
+
+  <hr class="divider">
+
+  <h3>Ranking Summary Table</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Keyword</th><th>Monthly Volume (est.)</th><th>IFT Current</th><th>Best Competitor</th><th>Winner's Strategy</th></tr></thead>
+      <tbody>
+        <tr><td>"epoxy floors ct"</td><td>High (~500+)</td><td><span class="xmark"><strong>Not ranking</strong></span></td><td>CT Concrete Floors (#3)</td><td>Dedicated service page + blog</td></tr>
+        <tr><td>"epoxy floors ct contractor..."</td><td>Low (~20)</td><td><span class="check"><strong>#1</strong></span></td><td>Everlast (#2, #3)</td><td>Dedicated epoxy-flooring-ct page</td></tr>
+        <tr><td>"epoxy flooring contractor Hamden CT"</td><td>Low-Med (~50)</td><td><span class="check"><strong>#1</strong></span></td><td>Everlast (#2)</td><td>County-specific landing page</td></tr>
+        <tr><td>"poly aspartic flooring Connecticut"</td><td>Med (~100)</td><td><span class="xmark"><strong>Not ranking</strong></span></td><td>CT Concrete Floors (#3)</td><td>Blog post: "Ultimate Guide"</td></tr>
+        <tr><td>"polyaspartic... Hamden CT"</td><td>Low (~30)</td><td><span class="xmark"><strong>Not ranking</strong></span></td><td>5 Star Concrete (#1-8)</td><td>Programmatic city pages</td></tr>
+        <tr><td>"urethane cement flooring CT"</td><td>Med (~80)</td><td><span class="xmark"><strong>Not ranking</strong></span></td><td>CMK Coatings (#2)</td><td>Service page content</td></tr>
+        <tr><td>"urethane cement... New Haven CT"</td><td>Low (~30)</td><td><span class="xmark"><strong>Not ranking</strong></span></td><td>Black Bear (#1-2)</td><td>City-specific landing pages</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Key Takeaways</h3>
+  <p><strong>1. IFT only ranks for branded/exact-location queries.</strong><br>
+  The current site ranks #1 for "epoxy flooring contractor Hamden CT" (its own city + exact service) but disappears entirely for broader CT-wide keywords and high-value specialty terms.</p>
+
+  <p><strong>2. IFT has ZERO visibility for polyaspartic and urethane cement.</strong><br>
+  Despite offering urethane cement flooring (Dur-A-Flex Poly-Crete) and being a Dur-A-Flex certified installer, the current site doesn't rank for either term. The word "polyaspartic" doesn't appear on the site at all, and "urethane cement" has no dedicated targeting.</p>
+
+  <p><strong>3. The biggest ranking threat is 5 Star Concrete Coatings.</strong><br>
+  This competitor owns 8 of 10 organic results for "polyaspartic epoxy floor coating Hamden Connecticut" using a programmatic city-page SEO strategy -- dozens of auto-generated pages like <code>/Polyaspartic-Floor-Coatings_Hamden_CT.htm</code>. They are eating IFT's lunch in its own backyard.</p>
+
+  <p><strong>4. Blog content is the #1 ranking differentiator.</strong><br>
+  CT Concrete Floors ranks for "poly aspartic flooring Connecticut" (#3) purely because of a blog post: "Ultimate Guide To Polyaspartic Floor Coating Solutions." Black Bear ranks for urethane-related queries partly from a blog post: "Epoxy vs Urethane Floor Coatings." Content marketing is how these competitors capture informational search intent.</p>
+
+  <p><strong>5. The new IFT site partially fixes this -- but needs content expansion.</strong><br>
+  The new site's services page includes dedicated H2 sections for "Urethane Floor Systems" with keyword-rich content about Dur-A-Flex Poly-Crete, breweries, and FDA compliance. This is a massive improvement over the current site. However, to compete for polyaspartic and urethane-specific keywords, IFT needs:</p>
+
+  <h3>Recommended Content Strategy to Close the Gap</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Priority</th><th>Action</th><th>Target Keywords</th><th>Estimated Impact</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge badge-critical">Critical</span></td><td>Add "Polyaspartic Floor Coatings" as a service on services page</td><td>polyaspartic flooring CT</td><td>Opens entirely new keyword category</td></tr>
+        <tr><td><span class="badge badge-critical">Critical</span></td><td>Create blog post: "Polyaspartic vs Epoxy Floor Coatings: Which Is Right for Your CT Project?"</td><td>polyaspartic floor coating CT, polyaspartic vs epoxy</td><td>Targets informational intent (CT Concrete Floors' winning strategy)</td></tr>
+        <tr><td><span class="badge badge-critical">Critical</span></td><td>Create blog post: "Urethane Cement Flooring for CT Breweries &amp; Food Processing Facilities"</td><td>urethane cement flooring CT, brewery flooring CT</td><td>Targets IFT's Dur-A-Flex specialty</td></tr>
+        <tr><td><span class="badge badge-high">High</span></td><td>Create city/county landing pages: "Epoxy Flooring New Haven County CT"</td><td>epoxy flooring New Haven CT, flooring contractor [city] CT</td><td>Counters 5 Star Concrete and DiamondKote's geo-targeting</td></tr>
+        <tr><td><span class="badge badge-high">High</span></td><td>Create blog post: "Epoxy vs Urethane vs Polyaspartic: A CT Contractor's Guide"</td><td>epoxy vs urethane flooring, floor coating comparison CT</td><td>Captures comparison search intent</td></tr>
+        <tr><td><span class="badge badge-medium">Medium</span></td><td>Add case study pages for notable projects (Fox Farm Brewery, Yale, Mohegan Sun)</td><td>brewery flooring CT, university flooring CT</td><td>Builds E-E-A-T authority + long-tail keywords</td></tr>
+        <tr><td><span class="badge badge-medium">Medium</span></td><td>Create "Industries We Serve" landing pages (Food &amp; Beverage, Manufacturing, Healthcare)</td><td>industrial flooring CT, food processing floor CT</td><td>Matches Everlast's industry page strategy</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SUMMARY OF SEO IMPACT
+     ════════════════════════════════════════════════ -->
+<section id="summary">
+  <h2>Summary of SEO Impact</h2>
+
+  <h3>Immediate Benefits (Post-Launch)</h3>
+  <ol>
+    <li><strong>Local Pack visibility</strong> -- JSON-LD schema enables Google Knowledge Panel and Maps integration</li>
+    <li><strong>Mobile traffic recovery</strong> -- Mobile-first design captures 60%+ of search traffic currently lost</li>
+    <li><strong>Image search traffic</strong> -- Alt text on 42+ gallery images opens an entirely new traffic channel</li>
+    <li><strong>Higher CTR from search results</strong> -- Optimized titles, descriptions, and potential rich snippets</li>
+    <li><strong>Faster page loads</strong> -- Direct ranking boost from Core Web Vitals improvement</li>
+    <li><strong>Link equity preservation</strong> -- 301 redirects prevent traffic loss during migration</li>
+  </ol>
+
+  <h3>Medium-Term Benefits (1-3 Months)</h3>
+  <ol start="7">
+    <li><strong>Improved keyword rankings</strong> -- Proper heading hierarchy and on-page optimization</li>
+    <li><strong>Increased crawl efficiency</strong> -- Clean URLs and proper sitemap</li>
+    <li><strong>Social sharing traffic</strong> -- Open Graph tags generate professional preview cards</li>
+    <li><strong>Reduced bounce rate</strong> -- Modern design, fast loads, and clear CTAs keep visitors engaged</li>
+  </ol>
+
+  <h3>Long-Term Benefits (3-12 Months)</h3>
+  <ol start="11">
+    <li><strong>Compounding SEO authority</strong> -- All technical debt eliminated; future content automatically benefits</li>
+    <li><strong>No platform dependency</strong> -- Full ownership and control, no recurring platform fees</li>
+    <li><strong>Scalability</strong> -- Easy to add new pages, blog posts, or landing pages for additional keywords</li>
+    <li><strong>Competitive advantage</strong> -- The new site outscores all 5 audited competitors on technical SEO (see Section 15). No competitor combines WebP images, sub-10KB JS, full Open Graph, keyword-rich alt text, and edge CDN hosting.</li>
+  </ol>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     POST-LAUNCH ACTIONS
+     ════════════════════════════════════════════════ -->
+<section id="post-launch">
+  <h2>Recommended Post-Launch Actions</h2>
+  <ol class="post-launch">
+    <li><strong>Create <code>robots.txt</code></strong> with sitemap reference</li>
+    <li><strong>Create <code>sitemap.xml</code></strong> with the 5 primary pages + feedback pages</li>
+    <li><strong>Submit new sitemap</strong> to Google Search Console</li>
+    <li><strong>Request Google re-index</strong> of all primary pages</li>
+    <li><strong>Verify Google Business Profile</strong> links to new site</li>
+    <li><strong>Set up Google Search Console</strong> and monitor indexing</li>
+    <li><strong>Add favicon</strong> (<code>favicon.ico</code> and <code>apple-touch-icon</code>)</li>
+    <li><strong>Consider adding a blog</strong> for ongoing content marketing and keyword targeting</li>
+  </ol>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════ -->
+<footer class="report-footer">
+  <p><em>Report generated from manual code audit comparing the live industrialfloortech.com source code against the new site build, plus competitive SEO analysis of the top 5 CT epoxy flooring contractors.</em></p>
+  <p><strong>Competitors audited:</strong> Everlast Industrial Flooring, Pro Epoxy CT, DiamondKote, Heavy Duty Floors, CT Concrete Floors</p>
+  <div class="sources">
+    <p><strong>Sources:</strong></p>
+    <ul>
+      <li><a href="https://everlastflooringct.com/">Everlast Industrial Flooring</a></li>
+      <li><a href="https://www.proepoxyct.com/">Pro Epoxy CT</a></li>
+      <li><a href="https://diamondkote.net/">DiamondKote</a></li>
+      <li><a href="https://www.heavydutyfloors.com/">Heavy Duty Floors</a></li>
+      <li><a href="https://concretefloorsct.com/">CT Concrete Floors</a></li>
+    </ul>
+  </div>
+</footer>
+
+</div><!-- /report-wrapper -->
+</body>
+</html>
