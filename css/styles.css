@@ -225,6 +225,19 @@ p + p { margin-top: 1rem; }
   transition: height var(--transition);
 }
 
+.header-logo .logo-scrolled {
+  display: none;
+}
+
+.site-header.scrolled .header-logo .logo-default {
+  display: none;
+}
+
+.site-header.scrolled .header-logo .logo-scrolled {
+  display: block;
+  height: 60px;
+}
+
 .site-header.scrolled .header-logo img {
   height: 60px;
 }
