@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Project Estimate — Industrial Flooring Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #0A1B5C;
+      --yellow: #FFE600;
+      --text: #1F2937;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+      --bg-light: #F9FAFB;
+      --bg-alt: #F3F4F6;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: #FFFFFF;
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Header */
+    .estimate-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 3px solid var(--navy);
+      margin-bottom: 2.5rem;
+    }
+    .estimate-brand h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+    .estimate-brand p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+    .estimate-meta {
+      text-align: right;
+      font-size: 0.9rem;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .estimate-meta strong {
+      display: block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Client Block */
+    .client-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      background: var(--bg-light);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .client-block h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .client-block p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Section Headers */
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--yellow);
+      display: inline-block;
+    }
+
+    /* Line Items Table */
+    .estimate-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2.5rem;
+    }
+    .estimate-table thead th {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #FFFFFF;
+      background: var(--navy);
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+    .estimate-table thead th:last-child {
+      text-align: right;
+    }
+    .estimate-table tbody td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      vertical-align: top;
+    }
+    .estimate-table tbody tr:nth-child(even) {
+      background: var(--bg-light);
+    }
+    .estimate-table tbody td:first-child {
+      font-weight: 500;
+      width: 28%;
+    }
+    .estimate-table tbody td:last-child {
+      text-align: right;
+      white-space: nowrap;
+      font-weight: 500;
+      width: 18%;
+    }
+    .estimate-table tbody td:nth-child(2) {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Totals */
+    .totals-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2.5rem;
+    }
+    .totals-table td {
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+    }
+    .totals-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+    .totals-table td:last-child {
+      text-align: right;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .totals-table .total-row {
+      background: var(--navy);
+      color: #FFFFFF;
+      border-bottom: none;
+    }
+    .totals-table .total-row td {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 1rem;
+    }
+    .totals-table .recommended-row {
+      background: var(--bg-alt);
+    }
+    .totals-table .recommended-row td {
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* Comparison */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .comparison-card {
+      padding: 1.25rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .comparison-card.highlight {
+      border-color: var(--navy);
+      background: var(--bg-light);
+      box-shadow: 0 2px 8px rgba(10, 27, 92, 0.1);
+    }
+    .comparison-card h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .comparison-card .price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .comparison-card.highlight .price {
+      color: var(--navy);
+    }
+    .comparison-card p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      line-height: 1.4;
+    }
+
+    /* Scope */
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .scope-col h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .scope-col ul {
+      list-style: none;
+    }
+    .scope-col ul li {
+      padding: 0.35rem 0 0.35rem 1.25rem;
+      position: relative;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .scope-col ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    /* Notes */
+    .notes {
+      padding: 1.5rem;
+      background: var(--bg-light);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .notes h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .notes ul {
+      list-style: none;
+    }
+    .notes ul li {
+      padding: 0.3rem 0 0.3rem 1.25rem;
+      position: relative;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .notes ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    /* Offer Banner */
+    .offer-banner {
+      background: var(--navy);
+      color: #FFFFFF;
+      border-radius: 6px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .offer-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100%;
+      background: var(--yellow);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .offer-banner-content {
+      position: relative;
+      z-index: 1;
+    }
+    .offer-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--yellow);
+      margin-bottom: 0.5rem;
+    }
+    .offer-price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .offer-price .was {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: line-through;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .offer-message {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      max-width: 600px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+    .offer-message strong {
+      color: #FFFFFF;
+    }
+    .offer-expires {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.4rem 1rem;
+      background: rgba(255, 230, 0, 0.15);
+      border: 1px solid var(--yellow);
+      color: var(--yellow);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 3px;
+    }
+
+    /* Footer */
+    .estimate-footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .estimate-footer strong {
+      color: var(--navy);
+    }
+
+    /* Print */
+    @media print {
+      body { font-size: 11pt; }
+      .page { padding: 0; max-width: 100%; }
+      .estimate-header { border-bottom-width: 2px; }
+      .comparison-card.highlight { box-shadow: none; border-width: 2px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .estimate-header { flex-direction: column; gap: 1rem; }
+      .estimate-meta { text-align: left; }
+      .client-block { grid-template-columns: 1fr; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .scope-grid { grid-template-columns: 1fr; }
+      .estimate-table thead th,
+      .estimate-table tbody td { padding: 0.6rem 0.5rem; font-size: 0.85rem; }
+      .estimate-table tbody td:nth-child(2) { display: none; }
+      .estimate-table thead th:nth-child(2) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="estimate-header">
+      <div class="estimate-brand">
+        <h1>Website Project Estimate</h1>
+        <p>Custom Static Website — CT Market Pricing</p>
+      </div>
+      <div class="estimate-meta">
+        <strong>Estimate</strong>
+        <p>Date: February 2026</p>
+        <p>Valid for: 30 days</p>
+      </div>
+    </header>
+
+    <!-- Offer Banner -->
+    <div class="offer-banner">
+      <div class="offer-banner-content">
+        <div class="offer-label">Your Price</div>
+        <div class="offer-price">$2,500 <span class="was">$8,500–$10,000</span></div>
+        <p class="offer-message">I tried to give you a price you couldn't say no to. Based on the market research below, <strong>this project would normally run $8,500–$10,000</strong> from a CT web professional. After this month, the price goes up to <strong>$3,500</strong>.</p>
+        <span class="offer-expires">Offer expires February 28, 2026</span>
+      </div>
+    </div>
+
+    <!-- Client / Project Info -->
+    <div class="client-block">
+      <div>
+        <h3>Prepared For</h3>
+        <p><strong>Industrial Flooring Technologies</strong><br>
+        Brian Steinle<br>
+        594 Sherman Ave, Hamden, CT 06514</p>
+      </div>
+      <div>
+        <h3>Project Scope</h3>
+        <p>Custom-coded 7-page static website with responsive design, SEO optimization, gallery system, review funnel, and GBP image package.</p>
+      </div>
+    </div>
+
+    <!-- Line Items -->
+    <h2>Project Line Items</h2>
+    <table class="estimate-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Estimate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Discovery &amp; Strategy</td>
+          <td>Client meeting, competitor review, sitemap planning, brand direction</td>
+          <td>$500–$800</td>
+        </tr>
+        <tr>
+          <td>Custom Design</td>
+          <td>Brand-aligned layout, color system, typography, desktop &amp; mobile mockups for 5 core pages</td>
+          <td>$1,500–$2,500</td>
+        </tr>
+        <tr>
+          <td>Front-End Development</td>
+          <td>Hand-coded HTML/CSS/JS, responsive breakpoints, scroll animations, lightbox, gallery with category filters</td>
+          <td>$2,000–$3,500</td>
+        </tr>
+        <tr>
+          <td>Content Writing</td>
+          <td>SEO-optimized copy for 5 pages, meta descriptions, JSON-LD structured data schema</td>
+          <td>$750–$1,200</td>
+        </tr>
+        <tr>
+          <td>Image Optimization</td>
+          <td>Processing 65+ images to WebP format, hero crops, lazy loading, descriptive alt text</td>
+          <td>$400–$600</td>
+        </tr>
+        <tr>
+          <td>SEO Foundation</td>
+          <td>Keyword research, on-page SEO, 301 redirects from old site URLs, XML sitemap</td>
+          <td>$500–$800</td>
+        </tr>
+        <tr>
+          <td>GBP Image Package</td>
+          <td>73 images with embedded EXIF/IPTC metadata — GPS coordinates, keywords, titles, descriptions</td>
+          <td>$300–$500</td>
+        </tr>
+        <tr>
+          <td>Review Funnel</td>
+          <td>Rate Your Experience modal, feedback routing, Google/Facebook/BBB review links, private complaint form</td>
+          <td>$400–$600</td>
+        </tr>
+        <tr>
+          <td>Deployment &amp; Hosting</td>
+          <td>Vercel configuration, domain setup, SSL, clean URLs, production optimization</td>
+          <td>$200–$300</td>
+        </tr>
+        <tr>
+          <td>Revisions</td>
+          <td>Two rounds of design and content revisions</td>
+          <td>$300–$500</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Totals -->
+    <h2>Pricing Summary</h2>
+    <table class="totals-table">
+      <tr>
+        <td>Low Estimate</td>
+        <td>$6,850</td>
+      </tr>
+      <tr>
+        <td>High Estimate</td>
+        <td>$11,300</td>
+      </tr>
+      <tr class="recommended-row">
+        <td>Typical CT Quote for This Scope</td>
+        <td>$8,000–$9,500</td>
+      </tr>
+      <tr class="total-row">
+        <td>Recommended Project Price</td>
+        <td>$8,500–$10,000</td>
+      </tr>
+    </table>
+
+    <!-- Market Comparison -->
+    <h2>CT Market Comparison</h2>
+    <div class="comparison-grid">
+      <div class="comparison-card">
+        <h4>Template-Based</h4>
+        <div class="price">$3,000–$5,000</div>
+        <p>Squarespace or Wix. Limited customization, less SEO control, platform dependency.</p>
+      </div>
+      <div class="comparison-card">
+        <h4>WordPress / Divi</h4>
+        <div class="price">$5,000–$8,000</div>
+        <p>Theme-based design. Requires hosting, plugins, updates, and ongoing maintenance.</p>
+      </div>
+      <div class="comparison-card highlight">
+        <h4>Custom-Coded (This Site)</h4>
+        <div class="price">$8,500–$10,000</div>
+        <p>Hand-built, zero dependencies. Fastest performance, best SEO, lowest hosting cost.</p>
+      </div>
+    </div>
+
+    <!-- What's Included -->
+    <h2>Scope of Work</h2>
+    <div class="scope-grid">
+      <div class="scope-col">
+        <h3>Pages Delivered</h3>
+        <ul>
+          <li>Home page with hero, stats, services, testimonials</li>
+          <li>Services page with 6 detailed service blocks</li>
+          <li>Project gallery with category filtering &amp; lightbox</li>
+          <li>About page with service area &amp; client roster</li>
+          <li>Contact page with cards &amp; embedded map</li>
+          <li>Feedback page with review platform links</li>
+          <li>Private feedback form page</li>
+        </ul>
+      </div>
+      <div class="scope-col">
+        <h3>Features &amp; Deliverables</h3>
+        <ul>
+          <li>Fully responsive (desktop, tablet, mobile)</li>
+          <li>SEO-optimized with JSON-LD schema</li>
+          <li>42-image gallery with filter &amp; lightbox</li>
+          <li>73 GBP images with EXIF metadata</li>
+          <li>Rate Your Experience review funnel</li>
+          <li>Scroll-triggered animations</li>
+          <li>Vercel hosting with 301 redirects</li>
+          <li>Sub-2s page load, 90+ Lighthouse score</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="notes">
+      <h3>Notes</h3>
+      <ul>
+        <li>This site is hand-coded with zero CMS, framework, or plugin dependencies — resulting in faster load times, stronger security, and near-zero hosting costs</li>
+        <li>The GBP image package and SEO foundation work is often sold separately by CT agencies as a local SEO package ($1,000–$2,000)</li>
+        <li>Ongoing maintenance and hosting would typically run $50–$150/month in the CT market</li>
+        <li>Additional pages, blog functionality, or CMS integration would be quoted separately</li>
+        <li>All pricing reflects Connecticut market rates for independent web professionals and small agencies as of 2026</li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="estimate-footer">
+      <p><strong>Webbersaurus</strong> · webbersaur.us</p>
+    </footer>
+
+  </div>
+</body>
+</html>
